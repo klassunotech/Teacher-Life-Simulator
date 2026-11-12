@@ -1,0 +1,700 @@
+{
+  "ap": 100,
+  "startMonth": 9,
+  "startYear": 2026,
+  "overworkAt": 70,
+  "labels": {
+    "teaching": "教學",
+    "administration": "行政",
+    "communication": "溝通",
+    "relationship": "人際",
+    "leadership": "領導",
+    "professional": "專業",
+    "resilience": "抗壓",
+    "efficiency": "效率",
+    "stress": "壓力",
+    "energy": "精力",
+    "satisfaction": "滿意度",
+    "wealth": "財富",
+    "familyRelation": "家庭關係",
+    "managementTrust": "管理層信任",
+    "studentRelation": "學生關係",
+    "government": "官立",
+    "aided": "資助",
+    "dss": "直資",
+    "private": "私立",
+    "academic": "學術",
+    "discipline": "紀律",
+    "collaboration": "協作",
+    "workload": "工作量",
+    "innovation": "創新",
+    "studentSupport": "學生支援",
+    "sportTraining": "校隊及學會訓練",
+    "health": "健康"
+  },
+  "actions": {
+    "teaching": {
+      "name": "教學",
+      "desc": "備課、授課、批改",
+      "fx": {
+        "teaching": 0.08,
+        "communication": 0.02,
+        "studentRelation": 0.04,
+        "stress": 0.2,
+        "energy": -0.3
+      }
+    },
+    "administration": {
+      "name": "行政",
+      "desc": "文件、會議、統籌",
+      "fx": {
+        "administration": 0.08,
+        "efficiency": 0.02,
+        "managementTrust": 0.05,
+        "stress": 0.25,
+        "energy": -0.25
+      }
+    },
+    "extracurricular": {
+      "name": "課外活動",
+      "desc": "學會、校隊、活動",
+      "fx": {
+        "relationship": 0.06,
+        "communication": 0.03,
+        "studentRelation": 0.08,
+        "satisfaction": 0.05,
+        "stress": 0.12,
+        "energy": -0.25
+      }
+    },
+    "professional": {
+      "name": "專業發展",
+      "desc": "進修、研討、備課研究",
+      "fx": {
+        "professional": 0.1,
+        "leadership": 0.03,
+        "stress": 0.1,
+        "energy": -0.2
+      }
+    },
+    "family": {
+      "name": "家庭活動",
+      "desc": "陪伴家人",
+      "fx": {
+        "familyRelation": 0.2,
+        "satisfaction": 0.08,
+        "stress": -0.25,
+        "energy": -0.1
+      }
+    },
+    "rest": {
+      "name": "休息",
+      "desc": "睡眠、運動、放鬆",
+      "fx": {
+        "resilience": 0.02,
+        "stress": -0.5,
+        "energy": 0.7
+      }
+    },
+    "personal": {
+      "name": "個人項目",
+      "desc": "興趣、副業、自學",
+      "fx": {
+        "efficiency": 0.04,
+        "satisfaction": 0.15,
+        "wealth": 60,
+        "stress": -0.1,
+        "energy": -0.15
+      }
+    },
+    "studentSupport": {
+      "name": "學生支援",
+      "desc": "個別跟進、學習及情緒支援",
+      "fx": {
+        "studentRelation": 0.12,
+        "communication": 0.04,
+        "stress": 0.16,
+        "energy": -0.22
+      }
+    },
+    "sportTraining": {
+      "name": "校隊及學會訓練",
+      "desc": "校隊、學會訓練及比賽（體育、音樂、STEM、語文等皆可）",
+      "fx": {
+        "leadership": 0.04,
+        "relationship": 0.05,
+        "resilience": 0.06,
+        "studentRelation": 0.06,
+        "stress": 0.18,
+        "energy": -0.3
+      }
+    }
+  },
+  "balance": {
+    "_說明": "所有月結算平衡參數集中於此；難度倍率見 difficulty。數值為遊戲模擬值，非真實教師薪級。",
+    "workCategories": [
+      "teaching",
+      "administration",
+      "extracurricular",
+      "professional",
+      "studentSupport",
+      "sportTraining"
+    ],
+    "fatigue": {
+      "startAP": 60,
+      "perAP": 110
+    },
+    "perf": {
+      "stressFrom": 55,
+      "stressDiv": 160,
+      "energyBelow": 40,
+      "energyDiv": 130,
+      "min": 0.7
+    },
+    "energy": {
+      "base": 10,
+      "restCap": 120
+    },
+    "stress": {
+      "decay": 0.1,
+      "reliefFloor": 0.15,
+      "reliefScale": 80,
+      "resist": 250
+    },
+    "skill": {
+      "softCap": 170,
+      "decayPerMonth": 0.2,
+      "maintainAP": {
+        "teaching": 15,
+        "administration": 8,
+        "professional": 6
+      },
+      "growthMult": 0.4,
+      "erosion": {
+        "teaching": 0.009,
+        "administration": 0.009,
+        "professional": 0.009,
+        "leadership": 0.006,
+        "communication": 0.004,
+        "relationship": 0.006,
+        "studentRelation": 0.008,
+        "managementTrust": 0.006,
+        "familyRelation": 0.01
+      }
+    },
+    "health": {
+      "stressFrom": 65,
+      "stressDrain": 0.9,
+      "exhaustBelow": 30,
+      "exhaustDrain": 0.9,
+      "recover": 0.35,
+      "restRecover": 0.2,
+      "restAP": 25,
+      "illnessDrain": 0.25,
+      "criticalAt": 8,
+      "criticalMonths": 3,
+      "ageFrom": 45,
+      "ageDrain": 0.012,
+      "ageRecover": 0.012
+    },
+    "difficulty": {
+      "easy": {
+        "name": "輕鬆",
+        "stress": 0.85,
+        "energy": 0.85,
+        "rest": 1.15,
+        "health": 0.8,
+        "income": 1.08,
+        "expense": 0.95,
+        "event": 0.8,
+        "promotion": -3
+      },
+      "balanced": {
+        "name": "平衡",
+        "stress": 1,
+        "energy": 1,
+        "rest": 1,
+        "health": 1,
+        "income": 1,
+        "expense": 1,
+        "event": 1,
+        "promotion": 0
+      },
+      "hard": {
+        "name": "困難",
+        "stress": 1.2,
+        "energy": 1.2,
+        "rest": 0.9,
+        "health": 1.25,
+        "income": 1,
+        "expense": 1.05,
+        "event": 1.2,
+        "promotion": 4
+      }
+    },
+    "finance": {
+      "_說明": "遊戲模擬數值，非真實香港教師薪級表。",
+      "rankMult": [
+        0.8,
+        0.88,
+        0.97,
+        1.06,
+        1.16,
+        1.27,
+        1.4,
+        1.5,
+        1.65
+      ],
+      "seniority": 0.01,
+      "inflation": 0.018,
+      "expenseScale": 1.8,
+      "contribRate": 0.05,
+      "contribCap": 1500,
+      "fundGrowth": 0.0025,
+      "fundCap": 3000000,
+      "payoutYears": 20,
+      "sideIncomeCapAP": 20,
+      "debtInterest": 0.005,
+      "debtStress": 1.2,
+      "debtFloor": -150000,
+      "externalGrowth": 0.01,
+      "retireExpense": 0.55,
+      "retireMaxYears": 25,
+      "lifestyle": {
+        "frugal": {
+          "name": "節儉",
+          "expense": 0.88,
+          "fx": {
+            "satisfaction": -0.25,
+            "stress": 0.15
+          }
+        },
+        "standard": {
+          "name": "一般",
+          "expense": 1,
+          "fx": {}
+        },
+        "comfort": {
+          "name": "優質",
+          "expense": 1.1,
+          "fx": {
+            "satisfaction": 0.35,
+            "stress": -0.2,
+            "familyRelation": 0.15
+          }
+        }
+      },
+      "spend": {
+        "trip": {
+          "name": "家庭旅行",
+          "cost": 8000,
+          "cd": 6,
+          "fx": {
+            "familyRelation": 8,
+            "satisfaction": 4,
+            "stress": -8
+          }
+        },
+        "hobby": {
+          "name": "個人興趣及自學",
+          "cost": 2500,
+          "cd": 3,
+          "fx": {
+            "satisfaction": 4,
+            "energy": 5,
+            "professional": 0.5
+          }
+        },
+        "checkup": {
+          "name": "健康檢查及運動計劃",
+          "cost": 3000,
+          "cd": 6,
+          "fx": {
+            "health": 4,
+            "stress": -3,
+            "energy": 3
+          }
+        }
+      },
+      "freedomAt": 4000000,
+      "pension": {
+        "base": 13000,
+        "perRank": 2000,
+        "perYearOver20": 300,
+        "early": 0.8
+      },
+      "partnerRetire": 0.6
+    },
+    "pathXp": {
+      "start": 0.4,
+      "ramp": 18,
+      "changeCooldown": 12,
+      "changeStress": 3
+    },
+    "paths": {
+      "teaching": {
+        "name": "教學專業型",
+        "desc": "專注課堂教學、學科知識、課程設計及學習成果。",
+        "abilities": "教學、專業、課堂管理",
+        "burden": "教學投入大，時間及精力需求高",
+        "growth": {
+          "teaching": 1.25,
+          "professional": 1.1
+        },
+        "energy": {
+          "teaching": 1.1
+        },
+        "weights": {
+          "teaching": 0.3,
+          "administration": 0.08,
+          "leadership": 0.12,
+          "professional": 0.18,
+          "communication": 0.08,
+          "managementTrust": 0.12,
+          "satisfaction": 0.05,
+          "resilience": 0.07
+        },
+        "cap": 3,
+        "paceMonths": 1.0,
+        "thresholdAdj": 0,
+        "project": {
+          "id": "openLesson",
+          "name": "公開課及教學示範",
+          "ap": 10,
+          "cost": 800,
+          "fx": {
+            "teaching": 3,
+            "communication": 1,
+            "professional": 1
+          },
+          "credential": "教學示範及分享經驗"
+        }
+      },
+      "management": {
+        "name": "行政管理型",
+        "desc": "負責科組、部門及校內行政管理，向中層及高層發展。",
+        "abilities": "行政、領導、溝通、決策",
+        "burden": "行政工作量及人事壓力增加",
+        "growth": {
+          "administration": 1.25,
+          "extracurricular": 1.05
+        },
+        "attr": {
+          "leadership": 1.2
+        },
+        "stress": {
+          "administration": 1.2
+        },
+        "energy": {
+          "administration": 1.1
+        },
+        "extraStress": 0.8,
+        "weights": {
+          "teaching": 0.14,
+          "administration": 0.24,
+          "leadership": 0.2,
+          "professional": 0.08,
+          "communication": 0.1,
+          "managementTrust": 0.16,
+          "satisfaction": 0.04,
+          "resilience": 0.04
+        },
+        "cap": 8,
+        "paceMonths": 1.0,
+        "thresholdAdj": 0,
+        "project": {
+          "id": "deptPlan",
+          "name": "統籌科組發展計劃",
+          "ap": 14,
+          "cost": 1500,
+          "fx": {
+            "administration": 3,
+            "leadership": 2,
+            "managementTrust": 3
+          },
+          "credential": "科組發展計劃統籌"
+        }
+      },
+      "student": {
+        "name": "學生發展型",
+        "desc": "專注學生成長、班級經營、訓輔及支援工作。",
+        "abilities": "人際、輔導、班級管理、危機處理",
+        "burden": "情緒勞動高，需處理大量學生及家長問題",
+        "growth": {
+          "studentSupport": 1.3,
+          "extracurricular": 1.2,
+          "teaching": 1.05
+        },
+        "stress": {
+          "studentSupport": 1.25,
+          "extracurricular": 1.1
+        },
+        "energy": {
+          "studentSupport": 1.15
+        },
+        "weights": {
+          "teaching": 0.18,
+          "studentRelation": 0.2,
+          "communication": 0.12,
+          "resilience": 0.08,
+          "leadership": 0.1,
+          "managementTrust": 0.12,
+          "satisfaction": 0.06,
+          "administration": 0.06,
+          "professional": 0.08
+        },
+        "cap": 5,
+        "paceMonths": 1.0,
+        "thresholdAdj": 0,
+        "project": {
+          "id": "classGrowth",
+          "name": "推行班級成長及支援計劃",
+          "ap": 12,
+          "cost": 1200,
+          "fx": {
+            "studentRelation": 4,
+            "communication": 2,
+            "resilience": 1
+          },
+          "credential": "班級成長計劃"
+        }
+      },
+      "curriculum": {
+        "name": "課程發展型",
+        "desc": "專注課程規劃、跨科合作、校本課程及教學評估。",
+        "abilities": "課程規劃、協作、評估、專案管理",
+        "burden": "需協調不同科組，溝通及工作成本較高",
+        "growth": {
+          "professional": 1.2,
+          "administration": 1.1,
+          "teaching": 1.05
+        },
+        "stress": {
+          "administration": 1.05,
+          "professional": 1.1
+        },
+        "extraStress": 0.5,
+        "weights": {
+          "teaching": 0.2,
+          "administration": 0.14,
+          "leadership": 0.14,
+          "professional": 0.2,
+          "communication": 0.1,
+          "managementTrust": 0.12,
+          "satisfaction": 0.05,
+          "resilience": 0.05
+        },
+        "cap": 5,
+        "paceMonths": 1.0,
+        "thresholdAdj": 0,
+        "project": {
+          "id": "crossCurriculum",
+          "name": "設計跨科專題課程",
+          "ap": 14,
+          "cost": 2000,
+          "fx": {
+            "professional": 3,
+            "teaching": 1,
+            "administration": 2,
+            "leadership": 1
+          },
+          "credential": "跨科課程設計"
+        }
+      },
+      "study": {
+        "name": "專業進修型",
+        "desc": "持續提升專業知識、教育資格及教學研究。",
+        "abilities": "學習、專業知識、研究、自我管理",
+        "burden": "需投入時間、AP 及金錢（每月學費），短期未必帶來晉升",
+        "growth": {
+          "professional": 1.45
+        },
+        "stress": {
+          "professional": 0.9
+        },
+        "expense": 1200,
+        "weights": {
+          "teaching": 0.18,
+          "administration": 0.06,
+          "leadership": 0.1,
+          "professional": 0.3,
+          "communication": 0.08,
+          "managementTrust": 0.1,
+          "satisfaction": 0.08,
+          "resilience": 0.1
+        },
+        "cap": 3,
+        "paceMonths": 1.15,
+        "thresholdAdj": 0,
+        "project": {
+          "id": "research",
+          "name": "發表教育研究",
+          "ap": 12,
+          "cost": 2500,
+          "fx": {
+            "professional": 4,
+            "teaching": 1
+          },
+          "credential": "教育研究成果"
+        }
+      },
+      "innovation": {
+        "name": "教育創新型",
+        "desc": "以新科技及創新方法改善教學及學校運作（適用於所有學科）。",
+        "abilities": "創新、科技應用、專案管理、解難",
+        "burden": "創新項目有失敗風險，亦受制度及資源限制",
+        "growth": {
+          "professional": 1.15,
+          "personal": 1.3
+        },
+        "attr": {
+          "efficiency": 1.3
+        },
+        "riskStress": {
+          "p": 0.08,
+          "v": 4
+        },
+        "weights": {
+          "teaching": 0.16,
+          "administration": 0.1,
+          "leadership": 0.14,
+          "professional": 0.22,
+          "communication": 0.1,
+          "managementTrust": 0.1,
+          "satisfaction": 0.08,
+          "resilience": 0.1
+        },
+        "cap": 3,
+        "paceMonths": 1.1,
+        "thresholdAdj": 0,
+        "project": {
+          "id": "prototype",
+          "name": "推出教育創新／科技原型",
+          "ap": 16,
+          "cost": 9000,
+          "fx": {
+            "professional": 2,
+            "efficiency": 3
+          },
+          "win": {
+            "p": 0.65,
+            "wealth": 14000,
+            "credential": "教育創新實踐"
+          },
+          "lose": {
+            "stress": 6,
+            "satisfaction": -2
+          }
+        }
+      },
+      "leadership": {
+        "name": "教育領導型",
+        "desc": "追求更高層次的學校及教育界領導工作（需資格、競爭，不保證成為校長）。",
+        "abilities": "領導、策略規劃、組織管理、溝通決策",
+        "burden": "責任、政治及人事壓力較大",
+        "growth": {
+          "administration": 1.1,
+          "professional": 1.1
+        },
+        "attr": {
+          "leadership": 1.5
+        },
+        "stress": {
+          "administration": 1.15
+        },
+        "extraStress": 1.2,
+        "weights": {
+          "teaching": 0.14,
+          "administration": 0.18,
+          "leadership": 0.26,
+          "professional": 0.1,
+          "communication": 0.1,
+          "managementTrust": 0.14,
+          "satisfaction": 0.04,
+          "resilience": 0.04
+        },
+        "cap": 8,
+        "paceMonths": 1.0,
+        "thresholdAdj": 0,
+        "project": {
+          "id": "policyForum",
+          "name": "參與教育界專業交流及政策諮詢",
+          "ap": 12,
+          "cost": 1800,
+          "fx": {
+            "leadership": 3,
+            "communication": 2,
+            "managementTrust": 2
+          },
+          "credential": "教育政策諮詢參與"
+        },
+        "topEdge": 10
+      },
+      "balanced": {
+        "name": "平衡生活型",
+        "desc": "在教學、家庭、健康及個人生活之間取得平衡，追求可持續的教師生涯。",
+        "abilities": "自我管理、時間管理、財務管理、情緒管理",
+        "burden": "晉升及部分專業發展機會較慢",
+        "stressAll": 0.9,
+        "energyAll": 0.92,
+        "effects": {
+          "satisfaction": 0.3,
+          "familyRelation": 0.15
+        },
+        "weights": {
+          "teaching": 0.2,
+          "administration": 0.12,
+          "leadership": 0.12,
+          "professional": 0.12,
+          "communication": 0.12,
+          "managementTrust": 0.12,
+          "satisfaction": 0.12,
+          "resilience": 0.08
+        },
+        "cap": 3,
+        "paceMonths": 1.25,
+        "thresholdAdj": 1,
+        "project": {
+          "id": "lifePlan",
+          "name": "制定長遠生活及財務規劃",
+          "ap": 8,
+          "cost": 500,
+          "fx": {
+            "satisfaction": 4,
+            "resilience": 2,
+            "familyRelation": 3,
+            "stress": -6
+          },
+          "credential": "生活及財務規劃"
+        }
+      }
+    },
+    "rankGate": {
+      "midCredential": "中層領導培訓",
+      "midFromRank": 3,
+      "pgmCredential": "校長資格培訓",
+      "pgmFromRank": 5,
+      "principalRank": 7,
+      "beyondCapLeadership": 65,
+      "principalRival": 24,
+      "deputyRival": 8,
+      "topPaths": [
+        "management",
+        "leadership"
+      ],
+      "topFromRank": 7,
+      "vacancyP": {
+        "3": 0.55,
+        "5": 0.32,
+        "7": 0.2,
+        "8": 0.14
+      },
+      "vacancyMonths": 12
+    },
+    "satisfaction": {
+      "base": 66,
+      "stressWeight": 0.4,
+      "rate": 0.06
+    }
+  }
+}

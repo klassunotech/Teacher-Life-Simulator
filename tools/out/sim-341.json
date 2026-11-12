@@ -1,0 +1,182 @@
+{
+  "seedsPerStrategy": 100,
+  "strategies": {
+    "idle": {
+      "runs": 100,
+      "gameOvers": 100,
+      "avgTurn": 61,
+      "avgRank": 0,
+      "avgHealth": 100,
+      "avgStress": 0,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "dismissal": 100
+      }
+    },
+    "teaching": {
+      "runs": 100,
+      "gameOvers": 100,
+      "avgTurn": 65,
+      "avgRank": 0,
+      "avgHealth": 1.5,
+      "avgStress": 93,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "dismissal": 13,
+        "health": 86,
+        "school-closure": 1
+      }
+    },
+    "administration": {
+      "runs": 100,
+      "gameOvers": 100,
+      "avgTurn": 66,
+      "avgRank": 0,
+      "avgHealth": 0.1,
+      "avgStress": 93,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "health": 98,
+        "school-closure": 2
+      }
+    },
+    "pd": {
+      "runs": 100,
+      "gameOvers": 100,
+      "avgTurn": 68,
+      "avgRank": 0,
+      "avgHealth": 4.4,
+      "avgStress": 92.6,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "dismissal": 46,
+        "health": 53,
+        "school-closure": 1
+      }
+    },
+    "communication": {
+      "runs": 100,
+      "gameOvers": 100,
+      "avgTurn": 60,
+      "avgRank": 0,
+      "avgHealth": 12.8,
+      "avgStress": 92.9,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "dismissal": 94,
+        "health": 6
+      }
+    },
+    "overwork": {
+      "runs": 100,
+      "gameOvers": 100,
+      "avgTurn": 90,
+      "avgRank": 0,
+      "avgHealth": 0.8,
+      "avgStress": 88.2,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "health": 96,
+        "school-closure": 4
+      }
+    },
+    "balanced": {
+      "runs": 100,
+      "gameOvers": 4,
+      "avgTurn": 233,
+      "avgRank": 0,
+      "avgHealth": 100,
+      "avgStress": 19.3,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "none": 96,
+        "school-closure": 4
+      }
+    },
+    "contract": {
+      "runs": 100,
+      "gameOvers": 2,
+      "avgTurn": 237,
+      "avgRank": 0,
+      "avgHealth": 100,
+      "avgStress": 35.7,
+      "permConversions": 59,
+      "renewalDecisions": 226,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "none": 98,
+        "school-closure": 2
+      }
+    },
+    "contractNoPerm": {
+      "runs": 100,
+      "gameOvers": 2,
+      "avgTurn": 237,
+      "avgRank": 0,
+      "avgHealth": 100,
+      "avgStress": 41.9,
+      "permConversions": 0,
+      "renewalDecisions": 327,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "none": 98,
+        "school-closure": 2
+      }
+    },
+    "promotion": {
+      "runs": 100,
+      "gameOvers": 4,
+      "avgTurn": 233,
+      "avgRank": 5.56,
+      "avgHealth": 72.8,
+      "avgStress": 54.2,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 0,
+      "transferSuccesses": 0,
+      "causes": {
+        "none": 96,
+        "school-closure": 4
+      }
+    },
+    "schoolrisk": {
+      "runs": 100,
+      "gameOvers": 5,
+      "avgTurn": 236,
+      "avgRank": 0,
+      "avgHealth": 99.9,
+      "avgStress": 8.5,
+      "permConversions": 0,
+      "renewalDecisions": 0,
+      "transferAttempts": 232,
+      "transferSuccesses": 95,
+      "causes": {
+        "none": 95,
+        "school-closure": 5
+      }
+    }
+  }
+}

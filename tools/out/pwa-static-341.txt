@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "manifest_valid": true,
+    "cache_version": true,
+    "old_cache_cleanup": true,
+    "relative_assets": true,
+    "assets_exist": true,
+    "service_worker_registered": true
+  },
+  "assets": 27,
+  "missing": []
+}

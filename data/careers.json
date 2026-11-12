@@ -1,0 +1,633 @@
+{
+  "genders": [
+    "男",
+    "女",
+    "其他"
+  ],
+  "education": [
+    {
+      "id": "bachelor",
+      "name": "學士學位",
+      "mods": {}
+    },
+    {
+      "id": "master",
+      "name": "碩士學位",
+      "mods": {
+        "professional": 6,
+        "leadership": 2
+      }
+    },
+    {
+      "id": "phd",
+      "name": "博士學位",
+      "mods": {
+        "professional": 10,
+        "communication": -2
+      }
+    }
+  ],
+  "qualification": [
+    {
+      "id": "pgde",
+      "name": "已受訓教師 (PGDE/PCEd)",
+      "mods": {
+        "teaching": 4
+      }
+    },
+    {
+      "id": "bed",
+      "name": "教育學士 (BEd)",
+      "mods": {
+        "teaching": 6,
+        "professional": 2
+      }
+    },
+    {
+      "id": "untrained",
+      "name": "未受訓教師",
+      "mods": {
+        "teaching": -4,
+        "resilience": -2
+      }
+    }
+  ],
+  "family": [
+    {
+      "id": "single",
+      "name": "單身",
+      "expense": 18000,
+      "famRel": 55,
+      "mods": {},
+      "partner": 0
+    },
+    {
+      "id": "married",
+      "name": "已婚",
+      "expense": 26000,
+      "famRel": 65,
+      "mods": {
+        "resilience": 2
+      },
+      "partner": 14000
+    },
+    {
+      "id": "kids",
+      "name": "已婚有子女",
+      "expense": 28000,
+      "famRel": 60,
+      "mods": {
+        "resilience": 3,
+        "efficiency": -2
+      },
+      "partner": 17000
+    },
+    {
+      "id": "elder",
+      "name": "需照顧長者",
+      "expense": 24000,
+      "famRel": 50,
+      "mods": {
+        "resilience": 4,
+        "efficiency": -3
+      },
+      "partner": 10000
+    }
+  ],
+  "courses": [
+    {
+      "id": "new-teacher-core",
+      "name": "新入職教師核心培訓（EDB 指定課程組合）",
+      "field": "教師專業核心培訓",
+      "category": "教師領導",
+      "trainingTrack": "core",
+      "hours": 30,
+      "months": 2,
+      "fee": 0,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "professional": 2,
+        "leadership": 1,
+        "resilience": 1
+      },
+      "credential": "教師核心培訓（30小時）",
+      "apCost": 2,
+      "pdCost": 1,
+      "completionCondition": "完成 30 小時教育局指定新入職核心培訓（遊戲合併呈現；實際須按 TCS 的 New Teachers (Core) 標示報讀及完成）；CPD 核心範疇分別記錄教師專業角色／價值／操守及教育議題時數",
+      "edbDesignated": true,
+      "countsTowardNJT": true,
+      "onlyForNJT": true,
+      "coreBreakdown": {
+        "professionalRolesValuesConduct": 15,
+        "educationIssues": 15
+      }
+    },
+    {
+      "id": "classroom-research",
+      "name": "課堂研究與教學設計",
+      "field": "教學專業",
+      "months": 3,
+      "fee": 1800,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "teaching": 3,
+        "professional": 3,
+        "communication": 1
+      },
+      "credential": "課堂研究證書",
+      "category": "教學及課程發展",
+      "hours": 36,
+      "apCost": 2,
+      "pdCost": 2,
+      "completionCondition": "完成 3 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "middle-leadership",
+      "name": "中層領導及科組管理",
+      "field": "教育領導",
+      "months": 4,
+      "fee": 4200,
+      "minMonths": 24,
+      "requires": [
+        "leadership"
+      ],
+      "fx": {
+        "leadership": 5,
+        "administration": 3,
+        "professional": 2
+      },
+      "credential": "中層領導培訓",
+      "category": "教師領導",
+      "hours": 60,
+      "apCost": 2,
+      "pdCost": 2,
+      "completionCondition": "完成 4 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "sports-coaching",
+      "name": "學會及校隊教練訓練（體育／音樂／STEM 等）",
+      "field": "學生活動",
+      "months": 3,
+      "fee": 2600,
+      "minMonths": 12,
+      "requires": [],
+      "fx": {
+        "leadership": 2,
+        "resilience": 3,
+        "professional": 3
+      },
+      "credential": "校隊教練證書",
+      "category": "學生支援",
+      "hours": 36,
+      "apCost": 2,
+      "pdCost": 2,
+      "completionCondition": "完成 3 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "edtech-design",
+      "name": "教育科技與數碼課程",
+      "field": "教育科技",
+      "months": 4,
+      "fee": 5000,
+      "minMonths": 12,
+      "requires": [
+        "professional"
+      ],
+      "fx": {
+        "professional": 5,
+        "efficiency": 3,
+        "communication": 2
+      },
+      "credential": "教育科技設計證書",
+      "category": "教學及課程發展",
+      "hours": 48,
+      "apCost": 1,
+      "pdCost": 2,
+      "completionCondition": "完成 4 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "student-counselling",
+      "name": "學生支援及輔導技巧",
+      "field": "學生支援",
+      "months": 3,
+      "fee": 2200,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "communication": 4,
+        "relationship": 3,
+        "resilience": 1
+      },
+      "credential": "學生支援培訓",
+      "category": "學生支援",
+      "hours": 36,
+      "apCost": 1,
+      "pdCost": 2,
+      "completionCondition": "完成 3 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "curriculum-assessment",
+      "name": "課程規劃及教育評估",
+      "field": "課程發展",
+      "months": 4,
+      "fee": 4500,
+      "minMonths": 18,
+      "requires": [
+        "professional"
+      ],
+      "fx": {
+        "professional": 3,
+        "administration": 2,
+        "leadership": 1,
+        "teaching": 1
+      },
+      "credential": "課程及評估培訓",
+      "category": "教學及課程發展",
+      "hours": 48,
+      "apCost": 2,
+      "pdCost": 2,
+      "completionCondition": "完成 4 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "principal-prep",
+      "name": "校長資格及教育領導培訓",
+      "field": "教育領導",
+      "months": 6,
+      "fee": 12000,
+      "minMonths": 96,
+      "requires": [
+        "leadership",
+        "administration"
+      ],
+      "fx": {
+        "leadership": 4,
+        "administration": 3,
+        "communication": 2
+      },
+      "credential": "校長資格培訓",
+      "category": "教師領導",
+      "hours": 100,
+      "apCost": 2,
+      "pdCost": 2,
+      "completionCondition": "完成 6 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "life-finance",
+      "name": "工作生活平衡與財務規劃",
+      "field": "個人發展",
+      "months": 3,
+      "fee": 1500,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "resilience": 3,
+        "satisfaction": 3,
+        "efficiency": 1
+      },
+      "credential": "生活及財務規劃課程",
+      "category": "專業資格",
+      "hours": 36,
+      "apCost": 0,
+      "pdCost": 2,
+      "completionCondition": "完成 3 個月修讀進度",
+      "trainingTrack": "general"
+    },
+    {
+      "id": "pgde-equivalent",
+      "name": "兼讀制教師專業訓練（PGDE／PCEd 等認可課程）",
+      "field": "專業資格",
+      "category": "專業資格",
+      "hours": 0,
+      "months": 24,
+      "fee": 23500,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "teaching": 6,
+        "professional": 6,
+        "communication": 2
+      },
+      "credential": "認可教師訓練資格（PGDE／PCEd）",
+      "salaryBarClearance": true,
+      "apCost": 0,
+      "pdCost": 0,
+      "completionCondition": "兼讀制兩年課程，按院校課程完成 30–33 學分、學校體驗／教學實習及課程評核。PGDE 學習時數不冒充在職 CPD 時數；實際課程結構及資格認可由院校及教育局核定。",
+      "trainingTrack": "qualification",
+      "countsTowardCPD": false,
+      "onlyIfUntrained": true,
+      "secondYearFee": 24750,
+      "feeBasis": "以香港教育大學 2026/27 本地兼讀制 PGDE 年費 HK$23,500、2027/28 年費 HK$24,750 作遊戲參考；不同院校、科目及修讀模式費用與年期不同。",
+      "requiresEducation": [
+        "bachelor",
+        "master",
+        "phd"
+      ],
+      "creditsMin": 30,
+      "creditsMax": 33
+    },
+    {
+      "id": "assessment-literacy",
+      "name": "評估素養與促進學習的評估",
+      "field": "教學及課程發展",
+      "category": "教學及課程發展",
+      "hours": 24,
+      "months": 2,
+      "fee": 1800,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "teaching": 2,
+        "professional": 3
+      },
+      "credential": "評估素養證書",
+      "apCost": 0,
+      "pdCost": 2,
+      "completionCondition": "完成 2 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "sen-support",
+      "name": "特殊教育需要及共融支援",
+      "field": "學生支援",
+      "category": "學生支援",
+      "hours": 30,
+      "months": 2,
+      "fee": 2200,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "communication": 2,
+        "relationship": 2,
+        "resilience": 2
+      },
+      "credential": "SEN 支援培訓",
+      "apCost": 1,
+      "pdCost": 2,
+      "completionCondition": "完成 2 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "teacher-wellbeing",
+      "name": "學生情緒健康及危機介入",
+      "field": "學生支援",
+      "category": "學生支援",
+      "hours": 36,
+      "months": 3,
+      "fee": 2600,
+      "minMonths": 12,
+      "requires": [],
+      "fx": {
+        "communication": 3,
+        "resilience": 3,
+        "leadership": 1
+      },
+      "credential": "學生危機支援證書",
+      "apCost": 1,
+      "pdCost": 2,
+      "completionCondition": "完成 3 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "school-self-evaluation",
+      "name": "學校自評及學校發展計劃",
+      "field": "教師領導",
+      "category": "教師領導",
+      "hours": 42,
+      "months": 3,
+      "fee": 3200,
+      "minMonths": 24,
+      "requires": [
+        "administration"
+      ],
+      "fx": {
+        "administration": 3,
+        "leadership": 3,
+        "professional": 2
+      },
+      "credential": "學校自評培訓",
+      "apCost": 2,
+      "pdCost": 2,
+      "completionCondition": "完成 3 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "school-finance",
+      "name": "學校財政及資源管理",
+      "field": "學校行政",
+      "category": "學校行政",
+      "hours": 24,
+      "months": 2,
+      "fee": 2400,
+      "minMonths": 36,
+      "requires": [
+        "administration"
+      ],
+      "fx": {
+        "administration": 4,
+        "leadership": 1
+      },
+      "credential": "學校財政管理證書",
+      "apCost": 1,
+      "pdCost": 2,
+      "completionCondition": "完成 2 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "education-law",
+      "name": "教育政策、法規及校本管治",
+      "field": "學校行政",
+      "category": "學校行政",
+      "hours": 24,
+      "months": 2,
+      "fee": 2100,
+      "minMonths": 24,
+      "requires": [],
+      "fx": {
+        "administration": 3,
+        "professional": 2,
+        "communication": 1
+      },
+      "credential": "教育政策及法規證書",
+      "apCost": 0,
+      "pdCost": 2,
+      "completionCondition": "完成 2 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "team-management",
+      "name": "團隊管理與專業督導",
+      "field": "教師領導",
+      "category": "教師領導",
+      "hours": 36,
+      "months": 3,
+      "fee": 3600,
+      "minMonths": 36,
+      "requires": [
+        "leadership"
+      ],
+      "fx": {
+        "leadership": 4,
+        "administration": 2,
+        "relationship": 1
+      },
+      "credential": "團隊管理培訓",
+      "apCost": 2,
+      "pdCost": 2,
+      "completionCondition": "完成 3 個月修讀進度",
+      "trainingTrack": "elective",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "crisis-management-cert",
+      "name": "校園危機管理及跨專業協作認證",
+      "field": "專業資格",
+      "category": "專業資格",
+      "trainingTrack": "elective",
+      "hours": 40,
+      "months": 3,
+      "fee": 6800,
+      "minMonths": 24,
+      "requires": [
+        "professional"
+      ],
+      "fx": {
+        "professional": 4,
+        "leadership": 2,
+        "resilience": 2
+      },
+      "credential": "校園危機管理專業認證",
+      "apCost": 1,
+      "pdCost": 3,
+      "completionCondition": "完成 3 個月課程及個案演練；選修培訓時數須經學校認可",
+      "structuredLearning": true,
+      "countsTowardNJT": true,
+      "simulatedEDBRecognition": true
+    },
+    {
+      "id": "inservice-core",
+      "name": "在職教師核心培訓：專業角色、價值及教育議題",
+      "field": "教師專業核心培訓",
+      "category": "教師領導",
+      "trainingTrack": "core",
+      "hours": 30,
+      "months": 2,
+      "fee": 0,
+      "minMonths": 0,
+      "requires": [],
+      "fx": {
+        "professional": 3,
+        "leadership": 1
+      },
+      "credential": "在職教師核心培訓（30小時）",
+      "apCost": 2,
+      "pdCost": 1,
+      "countsTowardNJT": false,
+      "completionCondition": "完成 30 小時結構化核心培訓；每三年 CPD 周期的核心部分，須涵蓋兩個核心範疇；CPD 核心範疇分別記錄教師專業角色／價值／操守及教育議題時數",
+      "coreBreakdown": {
+        "professionalRolesValuesConduct": 15,
+        "educationIssues": 15
+      }
+    },
+    {
+      "id": "promotion-core",
+      "name": "晉升核心培訓：校長領導能力及專業操守",
+      "field": "晉升核心培訓",
+      "category": "教師領導",
+      "trainingTrack": "promotionCore",
+      "hours": 30,
+      "months": 2,
+      "fee": 0,
+      "minMonths": 12,
+      "requires": [
+        "leadership"
+      ],
+      "fx": {
+        "leadership": 3,
+        "professional": 2,
+        "administration": 1
+      },
+      "credential": "晉升核心培訓（30小時）",
+      "apCost": 2,
+      "pdCost": 1,
+      "edbDesignated": true,
+      "completionCondition": "完成 30 小時教育局指定晉升核心培訓；須在實質晉升前五年內完成並提交 SMC／IMC 認可；此為獨立於新入職核心培訓的晉升要求"
+    }
+  ],
+  "trainingPolicy": {
+    "cpdSoftTargetHours": 150,
+    "cycleYears": 3,
+    "inServiceCoreHours": 30,
+    "newTeacherCoreHours": 30,
+    "newTeacherElectiveHours": 60,
+    "promotionCoreHours": 30,
+    "promotionElectiveHours": {
+      "SGM": 60,
+      "PGM": 100
+    },
+    "promotionValidityYears": 5,
+    "note": "每三年 CPD 150 小時軟指標，當中核心部分至少 30 小時；新入職公帑資助學校全職教師另須首三年完成 30 小時 New Teachers (Core) 及至少 60 小時 New Teachers (Elective)；資助學校晉升另須 30 小時指定晉升核心及 SGM 60／PGM 100 小時選修，於晉升前五年內完成並獲 SMC／IMC 認可。遊戲課程為模擬；真實時數只可按 EDB TCS 標示及學校核實計算。",
+    "promotionRequiresSchoolEndorsement": true,
+    "njtDeadlineMonths": 36,
+    "njtCoreHours": 30,
+    "inServiceCoreCategories": {
+      "professionalRolesValuesConduct": {
+        "label": "教師專業角色、價值及操守",
+        "minimumHours": 6
+      },
+      "educationIssues": {
+        "label": "本地、國家及國際教育議題",
+        "minimumHours": 6
+      }
+    }
+  }
+}

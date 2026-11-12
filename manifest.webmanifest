@@ -1,0 +1,37 @@
+{
+  "id": "./",
+  "name": "香港教師生涯模擬器",
+  "short_name": "教師模擬器",
+  "description": "香港中學教師職涯、學生群體、教學決策及學校生態長期模擬遊戲",
+  "lang": "zh-HK",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101827",
+  "theme_color": "#101827",
+  "categories": [
+    "games",
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

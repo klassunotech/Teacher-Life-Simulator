@@ -1,0 +1,9 @@
+{
+  "name": "teacher-life-simulator",
+  "version": "5.0.0-alpha.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/test.mjs tests/test-ui.mjs tests/test-career.mjs tests/test-fixes.mjs tests/test-310.mjs tests/test-layout.mjs tests/test-salary-pwa.mjs tests/test-340.mjs tests/test-341.mjs tests/test-342.mjs tests/test-400.mjs tests/test-news.mjs tests/test-share.mjs tests/test-403-completion.mjs"
+  }
+}

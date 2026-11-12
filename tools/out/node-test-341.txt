@@ -1,0 +1,647 @@
+
+> teacher-life-simulator@3.4.1 test
+> node --test tests/test.mjs tests/test-ui.mjs tests/test-career.mjs tests/test-fixes.mjs tests/test-310.mjs tests/test-layout.mjs tests/test-salary-pwa.mjs tests/test-340.mjs tests/test-341.mjs
+
+TAP version 13
+# Subtest: 難度：三種難度存在，開局記錄並產生實質差異
+ok 1 - 難度：三種難度存在，開局記錄並產生實質差異
+  ---
+  duration_ms: 135.087009
+  type: 'test'
+  ...
+# Subtest: 挑戰模式預設困難；未指定難度預設平衡
+ok 2 - 挑戰模式預設困難；未指定難度預設平衡
+  ---
+  duration_ms: 0.34957
+  type: 'test'
+  ...
+# Subtest: 教學 AP 梯度：精力單調下降、壓力單調上升，且沒有懸崖
+ok 3 - 教學 AP 梯度：精力單調下降、壓力單調上升，且沒有懸崖
+  ---
+  duration_ms: 243.550876
+  type: 'test'
+  ...
+# Subtest: 單靠休息不能解決一切：休息導向的職涯進度及技能落後
+ok 4 - 單靠休息不能解決一切：休息導向的職涯進度及技能落後
+  ---
+  duration_ms: 196.049934
+  type: 'test'
+  ...
+# Subtest: 沒有單一萬能分配：各專精策略在不同指標上領先
+ok 5 - 沒有單一萬能分配：各專精策略在不同指標上領先
+  ---
+  duration_ms: 298.190169
+  type: 'test'
+  ...
+# Subtest: 八條路線：全部適用一般教師，結構完整且與設定一致
+ok 6 - 八條路線：全部適用一般教師，結構完整且與設定一致
+  ---
+  duration_ms: 0.466608
+  type: 'test'
+  ...
+# Subtest: 路線不只是名稱：加成、代價及升職上限各有不同
+ok 7 - 路線不只是名稱：加成、代價及升職上限各有不同
+  ---
+  duration_ms: 166.222924
+  type: 'test'
+  ...
+# Subtest: 路線切換：有冷卻、換路線有壓力成本、加成按路線經驗逐步到位
+ok 8 - 路線切換：有冷卻、換路線有壓力成本、加成按路線經驗逐步到位
+  ---
+  duration_ms: 0.955339
+  type: 'test'
+  ...
+# Subtest: 職級門檻：GM→SGM→PGM→校長（二級）→校長（一級）
+ok 9 - 職級門檻：GM→SGM→PGM→校長（二級）→校長（一級）
+  ---
+  duration_ms: 0.903702
+  type: 'test'
+  ...
+# Subtest: 校長並非必然：行政／領導路線 20 年內成為校長的比例有限
+ok 10 - 校長並非必然：行政／領導路線 20 年內成為校長的比例有限
+  ---
+  duration_ms: 389.749312
+  type: 'test'
+  ...
+# Subtest: 升職加薪：按 2026 MPS 職級薪點計薪，優質生活增加支出
+ok 11 - 升職加薪：按 2026 MPS 職級薪點計薪，優質生活增加支出
+  ---
+  duration_ms: 0.988567
+  type: 'test'
+  ...
+# Subtest: 財富用途：冷卻、不可透支、不可購買 AP；儲蓄不可取回
+ok 12 - 財富用途：冷卻、不可透支、不可購買 AP；儲蓄不可取回
+  ---
+  duration_ms: 0.570391
+  type: 'test'
+  ...
+# Subtest: 負債有上限：利息、壓力懲罰，且不會無底線
+ok 13 - 負債有上限：利息、壓力懲罰，且不會無底線
+  ---
+  duration_ms: 4.727471
+  type: 'test'
+  ...
+# Subtest: 退休：每次活動為一年，現金流由退休金／儲備／支出決定，25 年後完結，不可無限刷錢
+ok 14 - 退休：每次活動為一年，現金流由退休金／儲備／支出決定，25 年後完結，不可無限刷錢
+  ---
+  duration_ms: 1.504519
+  type: 'test'
+  ...
+# Subtest: 健康值歸零會死亡並 Game Over，不再以強制退休繞過死亡
+ok 15 - 健康值歸零會死亡並 Game Over，不再以強制退休繞過死亡
+  ---
+  duration_ms: 0.428873
+  type: 'test'
+  ...
+# Subtest: 事件：新增學科中立事件，路線／職級條件有效
+ok 16 - 事件：新增學科中立事件，路線／職級條件有效
+  ---
+  duration_ms: 17.317455
+  type: 'test'
+  ...
+# Subtest: 舊存檔（3.0.x 真實存檔）可安全遷移並繼續遊玩
+ok 17 - 舊存檔（3.0.x 真實存檔）可安全遷移並繼續遊玩
+  ---
+  duration_ms: 16.481892
+  type: 'test'
+  ...
+# Subtest: 舊存檔：遷移後再存檔／讀檔往返一致
+ok 18 - 舊存檔：遷移後再存檔／讀檔往返一致
+  ---
+  duration_ms: 1.435877
+  type: 'test'
+  ...
+# Subtest: 決定性：相同 seed 與相同操作得出相同結果（含新系統）
+ok 19 - 決定性：相同 seed 與相同操作得出相同結果（含新系統）
+  ---
+  duration_ms: 3.012041
+  type: 'test'
+  ...
+# Subtest: 3.4.1 官方 MPS：GM／SGM／PGM／校長薪點範圍及 2026-04-01 薪金
+ok 20 - 3.4.1 官方 MPS：GM／SGM／PGM／校長薪點範圍及 2026-04-01 薪金
+  ---
+  duration_ms: 1.170086
+  type: 'test'
+  ...
+# Subtest: Contract 合約年期只會是 12／24／36 個月，合約教師不能申請或接受職級晉升
+ok 21 - Contract 合約年期只會是 12／24／36 個月，合約教師不能申請或接受職級晉升
+  ---
+  duration_ms: 8.167904
+  type: 'test'
+  ...
+# Subtest: 溝通點數獨立於 AP，進修點數及課程 AP 分開扣除
+ok 22 - 溝通點數獨立於 AP，進修點數及課程 AP 分開扣除
+  ---
+  duration_ms: 0.898695
+  type: 'test'
+  ...
+# Subtest: 專業工作投入至少 8 AP 可取得 1 PD，課程完成資格生效
+ok 23 - 專業工作投入至少 8 AP 可取得 1 PD，課程完成資格生效
+  ---
+  duration_ms: 6.245228
+  type: 'test'
+  ...
+# Subtest: 健康值歸零立即 Game Over，之後不能結算或進行退休活動
+ok 24 - 健康值歸零立即 Game Over，之後不能結算或進行退休活動
+  ---
+  duration_ms: 0.528479
+  type: 'test'
+  ...
+# Subtest: 3.3.1 舊存檔遷移保留原有進度並補齊 3.4.1 欄位
+ok 25 - 3.3.1 舊存檔遷移保留原有進度並補齊 3.4.1 欄位
+  ---
+  duration_ms: 1.091609
+  type: 'test'
+  ...
+# Subtest: 長期低表現經正式累積評核後才被解僱，Game Over 不可繼續
+ok 26 - 長期低表現經正式累積評核後才被解僱，Game Over 不可繼續
+  ---
+  duration_ms: 6.859374
+  type: 'test'
+  ...
+# Subtest: 失業或離開教師職系期間不會累積教師年資
+ok 27 - 失業或離開教師職系期間不會累積教師年資
+  ---
+  duration_ms: 0.727353
+  type: 'test'
+  ...
+# Subtest: 學校殺校有預警、公布期限及六個月轉校窗口
+ok 28 - 學校殺校有預警、公布期限及六個月轉校窗口
+  ---
+  duration_ms: 2.772979
+  type: 'test'
+  ...
+# Subtest: Contract 續約評估紀錄包含表現、管理層、學校財政及競爭因素
+ok 29 - Contract 續約評估紀錄包含表現、管理層、學校財政及競爭因素
+  ---
+  duration_ms: 0.593866
+  type: 'test'
+  ...
+# Subtest: 常額邀請接受後移除合約到期日並解鎖正式職系
+ok 30 - 常額邀請接受後移除合約到期日並解鎖正式職系
+  ---
+  duration_ms: 0.473859
+  type: 'test'
+  ...
+# Subtest: 非學年起始的 Contract 會在合約實際到期月評估，而非延遲至學年結束
+ok 31 - 非學年起始的 Contract 會在合約實際到期月評估，而非延遲至學年結束
+  ---
+  duration_ms: 1.259878
+  type: 'test'
+  ...
+# Subtest: 轉校申請消耗 5 專業 AP，同一遊戲月不能重複刷申請
+ok 32 - 轉校申請消耗 5 專業 AP，同一遊戲月不能重複刷申請
+  ---
+  duration_ms: 0.612493
+  type: 'test'
+  ...
+# Subtest: 3.4.1：BEd／PGDE 受訓與未受訓 GM 起薪及薪酬關限分開
+ok 33 - 3.4.1：BEd／PGDE 受訓與未受訓 GM 起薪及薪酬關限分開
+  ---
+  duration_ms: 0.966064
+  type: 'test'
+  ...
+# Subtest: 3.4.1：年度增薪按合資格服務年期，受訓與未受訓薪點上限不同
+ok 34 - 3.4.1：年度增薪按合資格服務年期，受訓與未受訓薪點上限不同
+  ---
+  duration_ms: 8.455467
+  type: 'test'
+  ...
+# Subtest: 3.4.1：課程完成才登記 CPD 核心／選修時數，三年周期有獨立記錄
+ok 35 - 3.4.1：課程完成才登記 CPD 核心／選修時數，三年周期有獨立記錄
+  ---
+  duration_ms: 2.167186
+  type: 'test'
+  ...
+# Subtest: 3.4.1：CP 與 AP 不足會回報明確原因，深入支援建立延遲後果
+ok 36 - 3.4.1：CP 與 AP 不足會回報明確原因，深入支援建立延遲後果
+  ---
+  duration_ms: 0.641777
+  type: 'test'
+  ...
+# Subtest: 3.4.1：財務預算逐項拆分，淨現金流與月結計算一致
+ok 37 - 3.4.1：財務預算逐項拆分，淨現金流與月結計算一致
+  ---
+  duration_ms: 0.790947
+  type: 'test'
+  ...
+# Subtest: 3.4.1：人物頁顯示 CP 不足及預期跟進；職涯頁顯示五類進修與時數要求
+ok 38 - 3.4.1：人物頁顯示 CP 不足及預期跟進；職涯頁顯示五類進修與時數要求
+  ---
+  duration_ms: 16.988089
+  type: 'test'
+  ...
+# Subtest: 3.4.1：完成認可 PGDE 訓練可獲兩個薪點資格增額，資格訓練不冒充 CPD
+ok 39 - 3.4.1：完成認可 PGDE 訓練可獲兩個薪點資格增額，資格訓練不冒充 CPD
+  ---
+  duration_ms: 1.652236
+  type: 'test'
+  ...
+# Subtest: 3.4.1：未受訓 GM 不可直接申請 SGM，完成教師訓練後才解除限制
+ok 40 - 3.4.1：未受訓 GM 不可直接申請 SGM，完成教師訓練後才解除限制
+  ---
+  duration_ms: 0.789495
+  type: 'test'
+  ...
+# Subtest: 3.4.1：NJT 核心時數不可代替資助學校晉升核心時數
+ok 41 - 3.4.1：NJT 核心時數不可代替資助學校晉升核心時數
+  ---
+  duration_ms: 0.508269
+  type: 'test'
+  ...
+# Subtest: 3.4.1：晉升培訓時數未獲 SMC／IMC 認可前不能計入晉升資格
+ok 42 - 3.4.1：晉升培訓時數未獲 SMC／IMC 認可前不能計入晉升資格
+  ---
+  duration_ms: 0.633824
+  type: 'test'
+  ...
+# Subtest: 3.4.1：新入職公帑資助學校教師三年未完成 30+60 小時會標示逾期及跟進
+ok 43 - 3.4.1：新入職公帑資助學校教師三年未完成 30+60 小時會標示逾期及跟進
+  ---
+  duration_ms: 0.545925
+  type: 'test'
+  ...
+# Subtest: 3.4.1：完成認可 PGDE 訓練後獲兩個薪點增額並解除未受訓薪酬關限
+ok 44 - 3.4.1：完成認可 PGDE 訓練後獲兩個薪點增額並解除未受訓薪酬關限
+  ---
+  duration_ms: 1.127543
+  type: 'test'
+  ...
+# Subtest: 3.4.1：非九月到期的合約會安排新學年生效，期間保留過渡聘用狀態
+ok 45 - 3.4.1：非九月到期的合約會安排新學年生效，期間保留過渡聘用狀態
+  ---
+  duration_ms: 0.912596
+  type: 'test'
+  ...
+# Subtest: 3.4.1：非九月接受 Perm 邀請，身份只在下一個九月轉換
+ok 46 - 3.4.1：非九月接受 Perm 邀請，身份只在下一個九月轉換
+  ---
+  duration_ms: 0.506236
+  type: 'test'
+  ...
+# Subtest: 3.4.1：財務頁顯示完整每月開支及淨現金流
+ok 47 - 3.4.1：財務頁顯示完整每月開支及淨現金流
+  ---
+  duration_ms: 1.17349
+  type: 'test'
+  ...
+# Subtest: 3.4.1：校方認可會消耗行政 AP，AP 不足會明確回報
+ok 48 - 3.4.1：校方認可會消耗行政 AP，AP 不足會明確回報
+  ---
+  duration_ms: 0.195057
+  type: 'test'
+  ...
+# Subtest: 2.1 career: eligibility, competitive promotion and acceptance
+ok 49 - 2.1 career: eligibility, competitive promotion and acceptance
+  ---
+  duration_ms: 5.138847
+  type: 'test'
+  ...
+# Subtest: 2.1 courses: AP fee, progress and credential
+ok 50 - 2.1 courses: AP fee, progress and credential
+  ---
+  duration_ms: 2.128899
+  type: 'test'
+  ...
+# Subtest: 2.1 transfer: preserve career and rebuild trust after school recruitment
+ok 51 - 2.1 transfer: preserve career and rebuild trust after school recruitment
+  ---
+  duration_ms: 0.988888
+  type: 'test'
+  ...
+# Subtest: 2.1 management: role gate, AP and budget effects
+ok 52 - 2.1 management: role gate, AP and budget effects
+  ---
+  duration_ms: 0.457545
+  type: 'test'
+  ...
+# Subtest: 2.1 save migration fills new career and management data
+ok 53 - 2.1 save migration fills new career and management data
+  ---
+  duration_ms: 1.433613
+  type: 'test'
+  ...
+# Subtest: 2.1 manual save slots and portable JSON import/export
+ok 54 - 2.1 manual save slots and portable JSON import/export
+  ---
+  duration_ms: 1.095095
+  type: 'test'
+  ...
+# Subtest: 2.1 twenty-year simulation stays playable and within attribute bounds
+ok 55 - 2.1 twenty-year simulation stays playable and within attribute bounds
+  ---
+  duration_ms: 19.70202
+  type: 'test'
+  ...
+# Subtest: 2.2 health: persistent decline warns, illness triggers, care and sick leave recover
+ok 56 - 2.2 health: persistent decline warns, illness triggers, care and sick leave recover
+  ---
+  duration_ms: 0.95674
+  type: 'test'
+  ...
+# Subtest: 2.2 retirement: age or service threshold creates an ending summary
+ok 57 - 2.2 retirement: age or service threshold creates an ending summary
+  ---
+  duration_ms: 0.761212
+  type: 'test'
+  ...
+# Subtest: 2.2 UI: health panel and retirement ending screen render
+ok 58 - 2.2 UI: health panel and retirement ending screen render
+  ---
+  duration_ms: 16.151535
+  type: 'test'
+  ...
+# Subtest: 3.0 multi-person investigation: three clues complete and consume AP
+ok 59 - 3.0 multi-person investigation: three clues complete and consume AP
+  ---
+  duration_ms: 0.945534
+  type: 'test'
+  ...
+# Subtest: 3.0 school leadership: recruit, appraise and resolve a crisis
+ok 60 - 3.0 school leadership: recruit, appraise and resolve a crisis
+  ---
+  duration_ms: 0.60349
+  type: 'test'
+  ...
+# Subtest: 3.0 retirement life: post-career activities and pension continue
+ok 61 - 3.0 retirement life: post-career activities and pension continue
+  ---
+  duration_ms: 0.470244
+  type: 'test'
+  ...
+# Subtest: 3.0 challenge and custom free start settings
+ok 62 - 3.0 challenge and custom free start settings
+  ---
+  duration_ms: 0.552985
+  type: 'test'
+  ...
+# Subtest: 3.0 external career transition and return to school uses recruitment chance
+ok 63 - 3.0 external career transition and return to school uses recruitment chance
+  ---
+  duration_ms: 0.513597
+  type: 'test'
+  ...
+# Subtest: 3.0 acting appointment: accept, serve six months and receive decision
+ok 64 - 3.0 acting appointment: accept, serve six months and receive decision
+  ---
+  duration_ms: 0.92262
+  type: 'test'
+  ...
+# Subtest: 延遲後果只生效一次，且完成後移出存檔
+ok 65 - 延遲後果只生效一次，且完成後移出存檔
+  ---
+  duration_ms: 8.390522
+  type: 'test'
+  ...
+# Subtest: 高壓力選項的跟進後果不會令壓力／家庭關係無限惡化
+ok 66 - 高壓力選項的跟進後果不會令壓力／家庭關係無限惡化
+  ---
+  duration_ms: 14.127531
+  type: 'test'
+  ...
+# Subtest: 事件池：scheduled 與 random／conditional 都會出現
+ok 67 - 事件池：scheduled 與 random／conditional 都會出現
+  ---
+  duration_ms: 11.003334
+  type: 'test'
+  ...
+# Subtest: 每月結算必有事件（保底）
+ok 68 - 每月結算必有事件（保底）
+  ---
+  duration_ms: 2.010705
+  type: 'test'
+  ...
+# Subtest: 校外職涯期間不觸發學校年曆事件
+ok 69 - 校外職涯期間不觸發學校年曆事件
+  ---
+  duration_ms: 3.023708
+  type: 'test'
+  ...
+# Subtest: AP 分配每月沿用上月，不需重新分配
+ok 70 - AP 分配每月沿用上月，不需重新分配
+  ---
+  duration_ms: 1.482426
+  type: 'test'
+  ...
+# Subtest: 即時行動用掉的 AP 亦計入下月沿用分配
+ok 71 - 即時行動用掉的 AP 亦計入下月沿用分配
+  ---
+  duration_ms: 0.751798
+  type: 'test'
+  ...
+# Subtest: 病假月份不會污染下月沿用分配
+ok 72 - 病假月份不會污染下月沿用分配
+  ---
+  duration_ms: 0.740431
+  type: 'test'
+  ...
+# Subtest: 沿用分配可存檔／載入，舊存檔缺欄位及已完成後果可補齊
+ok 73 - 沿用分配可存檔／載入，舊存檔缺欄位及已完成後果可補齊
+  ---
+  duration_ms: 2.110262
+  type: 'test'
+  ...
+# Subtest: 行動頁提供 ±1 AP 按鈕，並可逐點調整
+ok 74 - 行動頁提供 ±1 AP 按鈕，並可逐點調整
+  ---
+  duration_ms: 14.345923
+  type: 'test'
+  ...
+# Subtest: 選校：篩選後點擊的學校必須就是畫面上的那一間
+ok 75 - 選校：篩選後點擊的學校必須就是畫面上的那一間
+  ---
+  duration_ms: 4.016963
+  type: 'test'
+  ...
+# Subtest: 選校：篩選條件精準，官立不設宗教，抽選涵蓋全部有效組合
+ok 76 - 選校：篩選條件精準，官立不設宗教，抽選涵蓋全部有效組合
+  ---
+  duration_ms: 13.777314
+  type: 'test'
+  ...
+# Subtest: 校外職涯不能申請／接受校內升職；過期邀請失效
+ok 77 - 校外職涯不能申請／接受校內升職；過期邀請失效
+  ---
+  duration_ms: 0.491054
+  type: 'test'
+  ...
+# Subtest: 已離職人物不能交流／訪談；調查預設主題 id 正確
+ok 78 - 已離職人物不能交流／訪談；調查預設主題 id 正確
+  ---
+  duration_ms: 0.443074
+  type: 'test'
+  ...
+# Subtest: 人物交流有實際回報；升職對手不再因你的交流而變強
+ok 79 - 人物交流有實際回報；升職對手不再因你的交流而變強
+  ---
+  duration_ms: 0.563631
+  type: 'test'
+  ...
+# Subtest: 即時行動的 AP 不會令「行政不足」懲罰誤觸發
+ok 80 - 即時行動的 AP 不會令「行政不足」懲罰誤觸發
+  ---
+  duration_ms: 0.620405
+  type: 'test'
+  ...
+# Subtest: 多 seed 長期模擬：數值保持有限且在範圍內
+ok 81 - 多 seed 長期模擬：數值保持有限且在範圍內
+  ---
+  duration_ms: 58.388974
+  type: 'test'
+  ...
+# Subtest: 人物交流使用獨立溝通點數，不消耗 AP
+ok 82 - 人物交流使用獨立溝通點數，不消耗 AP
+  ---
+  duration_ms: 0.477944
+  type: 'test'
+  ...
+# Subtest: 進修／管理行動同樣可由未分配 AP 補上
+ok 83 - 進修／管理行動同樣可由未分配 AP 補上
+  ---
+  duration_ms: 0.784827
+  type: 'test'
+  ...
+# Subtest: 3.2.0：同一管理行動每月只可執行一次，且冷卻會存檔
+ok 84 - 3.2.0：同一管理行動每月只可執行一次，且冷卻會存檔
+  ---
+  duration_ms: 0.614676
+  type: 'test'
+  ...
+# Subtest: 3.2.0：同一調查主題每月只可展開一次，完成／放棄後仍受限制
+ok 85 - 3.2.0：同一調查主題每月只可展開一次，完成／放棄後仍受限制
+  ---
+  duration_ms: 0.419949
+  type: 'test'
+  ...
+# Subtest: 3.2.0：延遲後果按實際成功／失敗分支判斷
+ok 86 - 3.2.0：延遲後果按實際成功／失敗分支判斷
+  ---
+  duration_ms: 0.594056
+  type: 'test'
+  ...
+# Subtest: 3.4.1：遊戲 HUD 設為頂部 sticky 並有足夠層級
+ok 87 - 3.4.1：遊戲 HUD 設為頂部 sticky 並有足夠層級
+  ---
+  duration_ms: 0.72517
+  type: 'test'
+  ...
+# Subtest: 3.4.1：桌面主欄取消錯誤 max-width 置中並填滿可用欄位
+ok 88 - 3.4.1：桌面主欄取消錯誤 max-width 置中並填滿可用欄位
+  ---
+  duration_ms: 0.166796
+  type: 'test'
+  ...
+# Subtest: 3.4.1：手機版 HUD 明確 sticky，並避開橫向 hidden 造成的捲動祖先
+ok 89 - 3.4.1：手機版 HUD 明確 sticky，並避開橫向 hidden 造成的捲動祖先
+  ---
+  duration_ms: 0.167908
+  type: 'test'
+  ...
+# Subtest: 3.4.1：手機版仍保留底部導航
+ok 90 - 3.4.1：手機版仍保留底部導航
+  ---
+  duration_ms: 0.188668
+  type: 'test'
+  ...
+# Subtest: 3.4.1：畫面版本同步
+ok 91 - 3.4.1：畫面版本同步
+  ---
+  duration_ms: 0.190962
+  type: 'test'
+  ...
+# Subtest: 2026 MPS：關鍵薪點與薪酬職級準確
+ok 92 - 2026 MPS：關鍵薪點與薪酬職級準確
+  ---
+  duration_ms: 0.62363
+  type: 'test'
+  ...
+# Subtest: 薪點按 GM／SGM／PGM／校長二級／一級職級計算
+ok 93 - 薪點按 GM／SGM／PGM／校長二級／一級職級計算
+  ---
+  duration_ms: 0.86817
+  type: 'test'
+  ...
+# Subtest: 年度增薪：考績達標後按 MPS 薪點增加一點
+ok 94 - 年度增薪：考績達標後按 MPS 薪點增加一點
+  ---
+  duration_ms: 7.056905
+  type: 'test'
+  ...
+# Subtest: 直資／私立清楚標示為校本模擬，不冒充 MPS 實際薪酬
+ok 95 - 直資／私立清楚標示為校本模擬，不冒充 MPS 實際薪酬
+  ---
+  duration_ms: 0.263829
+  type: 'test'
+  ...
+# Subtest: 建立角色可選 Perm／Contract，薪酬按職級計算並保存聘用身份
+ok 96 - 建立角色可選 Perm／Contract，薪酬按職級計算並保存聘用身份
+  ---
+  duration_ms: 0.816103
+  type: 'test'
+  ...
+# Subtest: 職級晉升只出現五個真實薪級，不會出現 GM 升 GM
+ok 97 - 職級晉升只出現五個真實薪級，不會出現 GM 升 GM
+  ---
+  duration_ms: 0.18268
+  type: 'test'
+  ...
+# Subtest: PWA：manifest、service worker、離線核心資產及圖示齊備
+ok 98 - PWA：manifest、service worker、離線核心資產及圖示齊備
+  ---
+  duration_ms: 0.538233
+  type: 'test'
+  ...
+# \#\# Teacher Life Simulator 3.0.0 視覺與回歸測試（node tests/test-ui.mjs）
+# | ID | 測試 | 預期 | 實際 | 狀態 |
+# |---|---|---|---|---|
+# | R01 | 保護原有角色、隨機數及科目資料 | 角色建立及隨機模組維持原樣 | 2 個核心角色／隨機／科目檔案保持一致；career data 擴充屬預期 | PASS |
+# | R07 | 選校提供 16 間學校及七種宗教背景 | 官立／資助／直資／私立；天主教、基督教、佛教、道教、孔教、伊斯蘭教、非宗教 | 16 間；7 種宗教背景；4 種辦學類別 | PASS |
+# | R02 | 10 個場景皆可生成 SVG，且無外部 URL | 10 個場景、無 http 圖片 | classroom,staffroom,playground,principal,corridor,gate,gym,hall,computer,rest | PASS |
+# | R03 | 所有事件類別皆對應場景與 NPC | 60 個事件都有 | work,parent,admin,student,career,health,colleague,professional,family,personal | PASS |
+# | R08 | 新增職場及行政事件資料完整 | 60 個事件；每個事件至少 3 個選項；效果欄位有效 | 68 個事件，選項及效果欄位完整 | PASS |
+# | R04 | 主畫面顯示角色、場景、AP、日期、導覽；場景可切換 | HTML 含 sprite/stage/AP/學年/scene 按鈕 | OK | PASS |
+# | R05 | 事件畫面為對話場景；結果畫面有回饋 | NPC、名牌、對話框、選項；結果含「你選擇了」 | 12 個事件畫面／結果畫面 | PASS |
+# | R06 | 存檔擴充及舊結構遷移 | 新欄位可存取；缺少新欄位的舊存檔可補齊 | 新存檔及舊結構遷移正常 | PASS |
+# | R09 | 自動時間推進及 NPC 關係 | 倒數結束只結算一次；互動記錄信任變化 | 倒數自動結算一次；NPC 信任及記憶更新 | PASS |
+# Subtest: tests/test-ui.mjs
+ok 8 - tests/test-ui.mjs
+  ---
+  duration_ms: 77.487454
+  type: 'test'
+  ...
+# \# Teacher Life Simulator 3.4.1 Core Regression Report
+# 以 `node tests/test.mjs` 實際執行產生。
+# | ID | 測試 | 預期 | 實際 | 狀態 |
+# |---|---|---|---|---|
+# | T01 | 新遊戲：隨機模式 | 合法角色、9月、AP 100 | 陳栢賢, 22歲, 聖安德中學(aided) | PASS |
+# | T02 | 自由模式：自選月份＋無效表單被拒 | 起始2月；年齡50被拒 | 起始月=2 | PASS |
+# | T03 | 學校生成：16 間學校、四種類型及宗教欄位完整 | 16 間學校欄位齊全 | 16 間；四種辦學類別；七種宗教背景 | PASS |
+# | T04 | AP 分配上限 | 總和≤100、不為負、無效行動被拒 | {"teaching":80,"administration":20,"extracurricular":0,"professional":0,"family":0,"rest":0,"personal":0,"studentSupport":0,"sportTraining":0} | PASS |
+# | T05 | 完整學年（12個月）流程 | 12筆紀錄、日期9月→8月、跨年、年度結算畫面 | 結束於 2027/9，共觸發 12 個事件 | PASS |
+# | T06 | 年齡按生日月份、年資按月累計 | 生日月(3月)年齡+1；年資+12個月 | age 29, careerMonths 72 | PASS |
+# | T07 | 屬性／狀態極端值夾限 | 全力教學12個月仍在0–100 | stress=90 energy=18 | PASS |
+# | T08 | 壓力計算 | 全教學壓力升；全休息壓力降 | teaching 16.94, rest -19.41 | PASS |
+# | T09 | 事件資料 | ≥10個事件、每個≥2選項、兩種結果下都不越界 | 91 個事件，546 次結算測試 | PASS |
+# | T10 | 事件觸發 | scheduled(進入9月)、conditional(壓力≥75)皆能觸發 | e_open / e_burnout / 冷卻 OK | PASS |
+# | T11 | 確定性（固定 seed） | 相同 seed＋相同操作 → 相同紀錄 | 兩次完全一致 | PASS |
+# | T12 | 自動存檔與繼續 | 結算後存檔可載入且等於當前狀態 | 載入一致，可繼續 | PASS |
+# | T13 | 損壞／不相容存檔 | 損壞JSON、錯版本、屬性越界皆被拒，不崩潰 | 4 種情況皆正確處理 | PASS |
+# | T14 | UI 流程（無 DOM，模擬操作＋檢查輸出 HTML） | 自由／隨機模式可進入遊戲並完成一個學年 | 隨機／自由模式各完整跑 12 個月，繼續遊戲正常 | PASS |
+# | T15 | 桌面版版面（≥721px） | 側邊欄＋主內容 | 未執行（沙盒無瀏覽器，需人手測試） | NOT RUN |
+# | T16 | 手機版版面（≤720px） | 單欄、底部導航、無橫向捲動 | 未執行（沙盒無瀏覽器，需人手測試） | NOT RUN |
+# | T17 | 真實瀏覽器 localStorage／重新整理後繼續 | 可繼續 | 未執行（沙盒無瀏覽器，需人手測試） | NOT RUN |
+# Subtest: tests/test.mjs
+ok 9 - tests/test.mjs
+  ---
+  duration_ms: 197.562014
+  type: 'test'
+  ...
+1..100
+# tests 100
+# suites 0
+# pass 100
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2486.403329

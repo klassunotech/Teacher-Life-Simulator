@@ -1,0 +1,16 @@
+{
+ "desktop": [
+  {
+   "check": "測試流程例外",
+   "ok": false,
+   "detail": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://localhost:8123/index.html\\nCall log:\\n  - navigating to \"http://localhost:8123/index.html\", waiting until \"load\"\\n')"
+  }
+ ],
+ "mobile": [
+  {
+   "check": "測試流程例外",
+   "ok": false,
+   "detail": "Error('Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://localhost:8123/index.html\\nCall log:\\n  - navigating to \"http://localhost:8123/index.html\", waiting until \"load\"\\n')"
+  }
+ ]
+}

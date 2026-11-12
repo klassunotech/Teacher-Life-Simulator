@@ -1,0 +1,3660 @@
+[
+ {
+  "id": "e_open",
+  "title": "開學日",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    9
+   ]
+  ],
+  "cd": 11,
+  "desc": "新學年開始，校園擠滿新生與家長，科組同事都在忙。",
+  "choices": [
+   {
+    "t": "主動帶領新生適應活動",
+    "r": "新生很喜歡你，但你累透了。",
+    "fx": {
+     "stress": 4,
+     "energy": -6,
+     "studentRelation": 5,
+     "managementTrust": 2
+    }
+   },
+   {
+    "t": "照常上課，專注自己班",
+    "r": "一切按部就班。",
+    "fx": {
+     "teaching": 1,
+     "stress": 1,
+     "energy": -2
+    }
+   },
+   {
+    "t": "請假一日休息",
+    "r": "精神好了，但上司有點意見。",
+    "fx": {
+     "energy": 8,
+     "managementTrust": -3,
+     "stress": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_parents",
+  "title": "家長日",
+  "type": "scheduled",
+  "cat": "parent",
+  "cond": [
+   [
+    "month",
+    "==",
+    11
+   ]
+  ],
+  "cd": 11,
+  "desc": "一年一度家長日，家長排隊等候面談。",
+  "choices": [
+   {
+    "t": "逐個家長詳細面談",
+    "r": "家長感受到你的用心。",
+    "fx": {
+     "communication": 2,
+     "relationship": 2,
+     "stress": 4,
+     "energy": -8
+    }
+   },
+   {
+    "t": "集體講解，節省時間",
+    "r": "效率高，但部分家長覺得被敷衍。",
+    "fx": {
+     "stress": 1,
+     "communication": 0.5,
+     "studentRelation": -1
+    }
+   },
+   {
+    "t": "邀請資深同事分擔",
+    "p": 0.6,
+    "r": "同事爽快幫忙，氣氛輕鬆。",
+    "fx": {
+     "stress": -2,
+     "relationship": 1
+    },
+    "r2": "同事自顧不暇，你反而更忙。",
+    "fx2": {
+     "stress": 3,
+     "managementTrust": -2,
+     "relationship": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exam",
+  "title": "考試週",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    12
+   ]
+  ],
+  "cd": 11,
+  "desc": "試卷堆積如山，批改期限逼近。",
+  "choices": [
+   {
+    "t": "通宵趕改卷",
+    "r": "準時完成，但身心俱疲。",
+    "fx": {
+     "teaching": 1,
+     "stress": 8,
+     "energy": -12,
+     "studentRelation": 2
+    }
+   },
+   {
+    "t": "用評分準則提升效率",
+    "p": 0.7,
+    "r": "評分又快又準。",
+    "fx": {
+     "efficiency": 1.5,
+     "stress": 2,
+     "energy": -4
+    },
+    "r2": "準則有漏洞，要重改一批。",
+    "fx2": {
+     "stress": 5,
+     "energy": -6,
+     "studentRelation": -2
+    }
+   },
+   {
+    "t": "請助教協助部分選擇題",
+    "r": "輕鬆不少，但要付出一點成本。",
+    "fx": {
+     "stress": -3,
+     "managementTrust": -1,
+     "wealth": -500
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_esr",
+  "title": "校外評核文件",
+  "type": "scheduled",
+  "cat": "admin",
+  "cond": [
+   [
+    "month",
+    "==",
+    3
+   ]
+  ],
+  "cd": 11,
+  "desc": "學校準備校外評核，需要大量文件與數據。",
+  "choices": [
+   {
+    "t": "自願統籌文件",
+    "r": "校長對你另眼相看。",
+    "fx": {
+     "administration": 2,
+     "leadership": 1,
+     "managementTrust": 4,
+     "stress": 7,
+     "energy": -8
+    }
+   },
+   {
+    "t": "只做分內事",
+    "r": "平平穩穩。",
+    "fx": {
+     "stress": 1
+    }
+   },
+   {
+    "t": "建議用試算表自動化",
+    "p": 0.6,
+    "r": "大家都說好用。",
+    "fx": {
+     "efficiency": 2,
+     "managementTrust": 3,
+     "stress": -1
+    },
+    "r2": "上司覺得多此一舉。",
+    "fx2": {
+     "managementTrust": -2,
+     "stress": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_misconduct",
+  "title": "學生違規",
+  "type": "random",
+  "cat": "student",
+  "cd": 3,
+  "desc": "班上學生在堂上多次違規，影響同學。",
+  "choices": [
+   {
+    "t": "冷靜個別面談",
+    "r": "學生道歉，關係改善。",
+    "fx": {
+     "studentRelation": 3,
+     "communication": 1,
+     "stress": 2,
+     "energy": -3
+    }
+   },
+   {
+    "t": "轉交訓導處處理",
+    "r": "事件解決了，但學生有點抗拒你。",
+    "fx": {
+     "stress": -1,
+     "studentRelation": -2
+    }
+   },
+   {
+    "t": "當堂嚴厲訓斥",
+    "p": 0.4,
+    "r": "全班鴉雀無聲。",
+    "fx": {
+     "studentRelation": 1
+    },
+    "r2": "學生當眾頂撞，場面尷尬。",
+    "fx2": {
+     "studentRelation": -6,
+     "stress": 4
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_complaint",
+  "title": "家長投訴",
+  "type": "random",
+  "cat": "parent",
+  "cd": 6,
+  "desc": "有家長致電學校，投訴你的功課量太多。",
+  "choices": [
+   {
+    "t": "即日致電解釋",
+    "p": 0.75,
+    "r": "家長明白了。",
+    "fx": {
+     "communication": 1.5,
+     "stress": 3,
+     "managementTrust": 1
+    },
+    "r2": "家長更激動，要校長介入。",
+    "fx2": {
+     "stress": 6,
+     "managementTrust": -2
+    }
+   },
+   {
+    "t": "書面回覆並抄送上司",
+    "r": "程序清楚，上司放心。",
+    "fx": {
+     "administration": 1,
+     "stress": 2,
+     "managementTrust": 2
+    }
+   },
+   {
+    "t": "先請教科主任意見",
+    "r": "得到支持，也學到處理方法。",
+    "fx": {
+     "relationship": 1,
+     "stress": 1,
+     "managementTrust": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_leader",
+  "title": "活動主任邀請",
+  "type": "conditional",
+  "cat": "career",
+  "cond": [
+   [
+    "managementTrust",
+    ">=",
+    58
+   ]
+  ],
+  "cd": 12,
+  "max": 2,
+  "desc": "校長欣賞你的表現，邀請你擔任活動組統籌。",
+  "choices": [
+   {
+    "t": "接受邀請",
+    "r": "多了津貼，也多了責任。",
+    "fx": {
+     "leadership": 3,
+     "administration": 1,
+     "managementTrust": 3,
+     "stress": 8,
+     "energy": -8,
+     "wealth": 1500
+    }
+   },
+   {
+    "t": "婉拒，專注教學",
+    "r": "校長表示理解。",
+    "fx": {
+     "teaching": 1,
+     "stress": -1,
+     "managementTrust": -1
+    }
+   },
+   {
+    "t": "要求減少授課節數才答應",
+    "p": 0.5,
+    "r": "校長答應了。",
+    "fx": {
+     "leadership": 3,
+     "managementTrust": 1,
+     "stress": 3
+    },
+    "r2": "校長覺得你討價還價。",
+    "fx2": {
+     "managementTrust": -3,
+     "stress": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_burnout",
+  "title": "過勞警訊",
+  "type": "conditional",
+  "cat": "health",
+  "cond": [
+   [
+    "stress",
+    ">=",
+    75
+   ]
+  ],
+  "cd": 4,
+  "desc": "你連續失眠，在課堂上差點失控。",
+  "choices": [
+   {
+    "t": "向校方申請減少職務",
+    "p": 0.6,
+    "r": "校方批准，壓力大減。",
+    "fx": {
+     "stress": -12,
+     "managementTrust": -2
+    },
+    "r2": "只獲部分批准。",
+    "fx2": {
+     "stress": -3,
+     "managementTrust": -4
+    }
+   },
+   {
+    "t": "看醫生並休息數天",
+    "r": "醫生提醒你要善待自己。",
+    "fx": {
+     "stress": -10,
+     "energy": 10,
+     "wealth": -800,
+     "satisfaction": 2
+    }
+   },
+   {
+    "t": "硬撐下去",
+    "r": "你撐住了，但代價不輕。",
+    "fx": {
+     "stress": 5,
+     "energy": -10,
+     "resilience": 1,
+     "satisfaction": -4
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_cover",
+  "title": "同事求助代課",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 3,
+  "desc": "同事臨時有事，請你代一堂課。",
+  "choices": [
+   {
+    "t": "幫忙代課",
+    "r": "同事非常感激。",
+    "fx": {
+     "relationship": 3,
+     "energy": -6,
+     "stress": 2,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "婉拒",
+    "r": "你保住了自己的時間，但有點尷尬。",
+    "fx": {
+     "relationship": -2
+    }
+   },
+   {
+    "t": "以日後換堂為條件",
+    "r": "雙方都同意。",
+    "fx": {
+     "relationship": 1,
+     "administration": 0.5,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_edb",
+  "title": "教育局講座邀請",
+  "type": "random",
+  "cat": "professional",
+  "cd": 4,
+  "desc": "你收到一個與本科有關的專業講座邀請。",
+  "choices": [
+   {
+    "t": "親身出席",
+    "r": "獲益良多。",
+    "fx": {
+     "professional": 3,
+     "energy": -4,
+     "stress": 1
+    }
+   },
+   {
+    "t": "只取講義",
+    "r": "略有所得。",
+    "fx": {
+     "professional": 1
+    }
+   },
+   {
+    "t": "出席並回校分享",
+    "r": "同事反應不錯。",
+    "fx": {
+     "professional": 2,
+     "leadership": 1,
+     "relationship": 1,
+     "stress": 3,
+     "energy": -5
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_comp",
+  "title": "校際比賽邀請",
+  "type": "random",
+  "cat": "student",
+  "cd": 6,
+  "desc": "學生想參加校際比賽，請你擔任帶隊老師。",
+  "choices": [
+   {
+    "t": "認真帶隊參賽",
+    "r": "學生表現出色，你也很開心。",
+    "fx": {
+     "studentRelation": 5,
+     "satisfaction": 4,
+     "energy": -10,
+     "stress": 4,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "安排簡單訓練",
+    "r": "學生參與了，成績普通。",
+    "fx": {
+     "studentRelation": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "婉拒",
+    "r": "學生有點失望。",
+    "fx": {
+     "managementTrust": -1,
+     "studentRelation": -1,
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_family",
+  "title": "家人的期望",
+  "type": "conditional",
+  "cat": "family",
+  "cond": [
+   [
+    "familyRelation",
+    "<=",
+    40
+   ]
+  ],
+  "cd": 4,
+  "desc": "家人抱怨你太少回家，氣氛有點緊張。",
+  "choices": [
+   {
+    "t": "推掉部分工作陪伴家人",
+    "r": "家人很高興。",
+    "fx": {
+     "familyRelation": 10,
+     "stress": -4,
+     "managementTrust": -1,
+     "satisfaction": 3
+    }
+   },
+   {
+    "t": "周末帶家人旅行",
+    "r": "花了點錢，但關係好轉。",
+    "fx": {
+     "wealth": -1200,
+     "familyRelation": 6,
+     "energy": -4,
+     "satisfaction": 3
+    }
+   },
+   {
+    "t": "解釋工作忙碌",
+    "p": 0.4,
+    "r": "家人勉強接受。",
+    "fx": {
+     "familyRelation": 2
+    },
+    "r2": "家人更不滿。",
+    "fx2": {
+     "familyRelation": -4,
+     "stress": 3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_tutor",
+  "title": "私人補習邀請",
+  "type": "random",
+  "cat": "personal",
+  "cd": 6,
+  "desc": "有家長想聘請你做私人補習。",
+  "choices": [
+   {
+    "t": "接受補習",
+    "r": "收入增加，但更累。",
+    "fx": {
+     "wealth": 6000,
+     "energy": -8,
+     "stress": 3
+    }
+   },
+   {
+    "t": "婉拒",
+    "r": "你守住了界線。",
+    "fx": {
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "只開免費義務補習班",
+    "r": "學生很感激。",
+    "fx": {
+     "studentRelation": 2,
+     "satisfaction": 2,
+     "energy": -4
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_staff_conflict",
+  "title": "教員室的冷處理",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 8,
+  "desc": "你就一項共同工作向同事查詢，對方一直沒有回應。附近同事似乎也留意到氣氛有點尷尬。",
+  "choices": [
+   {
+    "t": "簡短重申工作問題，並以電郵確認",
+    "r": "溝通有紀錄，對方終於回覆。事情未必愉快，但工作可以繼續。",
+    "fx": {
+     "administration": 1.5,
+     "communication": 1,
+     "stress": 2,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "約時間私下了解分歧",
+    "p": 0.65,
+    "r": "雙方釐清了誤會，至少建立基本工作共識。",
+    "fx": {
+     "communication": 2,
+     "relationship": 2,
+     "stress": -1
+    },
+    "r2": "對方仍然拒絕溝通，你需要另尋正式協調途徑。",
+    "fx2": {
+     "stress": 4,
+     "managementTrust": -1
+    }
+   },
+   {
+    "t": "暫時不再追問，自己完成工作",
+    "r": "眼前工作完成了，但合作問題仍然存在。",
+    "fx": {
+     "efficiency": 1,
+     "stress": 2,
+     "relationship": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_personal_attack",
+  "title": "會議後的言語衝突",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 12,
+  "desc": "一名同事在討論工作時突然提高聲線，批評你的能力及態度，並表示不想再跟你討論。",
+  "choices": [
+   {
+    "t": "停止爭辯，記錄時間、地點及原話",
+    "r": "你沒有即場反擊，並留下客觀紀錄，方便日後按程序處理。",
+    "fx": {
+     "resilience": 1.5,
+     "administration": 1.5,
+     "stress": 2
+    }
+   },
+   {
+    "t": "即場反駁，要求對方尊重專業",
+    "p": 0.45,
+    "r": "你清楚表達底線，對方收斂了語氣。",
+    "fx": {
+     "communication": 1,
+     "satisfaction": 2,
+     "stress": 2
+    },
+    "r2": "雙方愈吵愈激烈，其他同事需要介入。",
+    "fx2": {
+     "stress": 7,
+     "relationship": -3,
+     "managementTrust": -2
+    }
+   },
+   {
+    "t": "請第三方主持工作會議",
+    "r": "討論回到工作內容，並訂下後續跟進方式。",
+    "fx": {
+     "administration": 2,
+     "communication": 1,
+     "managementTrust": 2,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_sop_bypass",
+  "title": "未批核先開展",
+  "type": "random",
+  "cat": "admin",
+  "cd": 9,
+  "desc": "活動負責同事通知你，外聘服務已安排下星期開始，但報價及批核文件仍未完成。",
+  "choices": [
+   {
+    "t": "暫停安排，補齊報價及批核程序",
+    "r": "進度稍為延誤，但程序及責任清晰。",
+    "fx": {
+     "administration": 2,
+     "efficiency": 1,
+     "managementTrust": 2,
+     "stress": 2
+    }
+   },
+   {
+    "t": "先讓活動開始，之後補文件",
+    "p": 0.55,
+    "r": "活動順利開始，暫時無人追問。",
+    "fx": {
+     "relationship": 1,
+     "stress": -1
+    },
+    "r2": "財務部要求交代，活動被迫暫停，需重新處理。",
+    "fx2": {
+     "administration": -1,
+     "stress": 7,
+     "managementTrust": -4
+    }
+   },
+   {
+    "t": "即時向主管提交書面風險提示",
+    "r": "主管接手決定，避免由你單方面承擔未批核的責任。",
+    "fx": {
+     "administration": 2,
+     "managementTrust": 1,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_schedule_change",
+  "title": "臨時更改時間表",
+  "type": "random",
+  "cat": "admin",
+  "cd": 10,
+  "desc": "同事在活動前一天才交來新時間表，涉及多班課堂及場地安排，未有先與相關老師協商。",
+  "choices": [
+   {
+    "t": "要求先開短會核對所有受影響課堂",
+    "r": "大家逐項核對後才落實，避免學生及場地撞期。",
+    "fx": {
+     "administration": 2,
+     "communication": 1,
+     "efficiency": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "先接受，盡量自行調動",
+    "p": 0.5,
+    "r": "今次勉強安排到，但你額外花了不少時間。",
+    "fx": {
+     "relationship": 1,
+     "stress": 5,
+     "energy": -4
+    },
+    "r2": "新安排造成撞堂及場地衝突，最後仍要重新編排。",
+    "fx2": {
+     "stress": 7,
+     "administration": -1,
+     "managementTrust": -2
+    }
+   },
+   {
+    "t": "以電郵列明不可行之處及替代方案",
+    "r": "管理層收到清楚資料，按實際限制作出決定。",
+    "fx": {
+     "administration": 2,
+     "communication": 1,
+     "managementTrust": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_assessment_interference",
+  "title": "評核準則被當眾質疑",
+  "type": "random",
+  "cat": "work",
+  "cd": 10,
+  "desc": "你正在課堂進行評核，另一位老師當著學生面前質疑你的評分標準，學生開始留意兩位老師的對話。",
+  "choices": [
+   {
+    "t": "先完成課堂，課後按共同準則討論",
+    "r": "你避免在學生面前爭論，課後再以評核準則逐項核對。",
+    "fx": {
+     "teaching": 1,
+     "professional": 1.5,
+     "stress": 2
+    }
+   },
+   {
+    "t": "即場解釋評分理據",
+    "p": 0.65,
+    "r": "學生明白評分準則，課堂秩序維持。",
+    "fx": {
+     "communication": 1.5,
+     "professional": 1,
+     "studentRelation": 1
+    },
+    "r2": "討論變成爭辯，學生對評核標準更疑惑。",
+    "fx2": {
+     "stress": 5,
+     "studentRelation": -2
+    }
+   },
+   {
+    "t": "建議科組統一評核文件及覆核程序",
+    "r": "科組開始建立共同準則，減少日後爭議。",
+    "fx": {
+     "administration": 1.5,
+     "leadership": 1,
+     "efficiency": 1,
+     "stress": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_student_discipline_boundary",
+  "title": "跨班懲處爭議",
+  "type": "random",
+  "cat": "student",
+  "cd": 8,
+  "desc": "你發現另一位老師曾在自己的課堂處分你任教班別的學生，但沒有通知你，學生亦不清楚應向誰跟進。",
+  "choices": [
+   {
+    "t": "先了解學生情況，再與同事核實",
+    "r": "你掌握了完整資料，並與同事商議一致的跟進方法。",
+    "fx": {
+     "communication": 1.5,
+     "studentRelation": 2,
+     "relationship": 1
+    }
+   },
+   {
+    "t": "要求日後所有跨班處分必須通知班主任",
+    "r": "大家同意建立通知機制，減少資訊落差。",
+    "fx": {
+     "administration": 2,
+     "leadership": 1,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "直接要求對方撤銷處分",
+    "p": 0.4,
+    "r": "對方願意重新檢視事件。",
+    "fx": {
+     "studentRelation": 1,
+     "stress": 1
+    },
+    "r2": "對方認為你越界干預，雙方關係轉差。",
+    "fx2": {
+     "relationship": -3,
+     "stress": 5
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_social_media",
+  "title": "內部討論流出社交平台",
+  "type": "random",
+  "cat": "admin",
+  "cd": 12,
+  "desc": "你發現一段涉及校內工作安排的討論截圖出現在社交平台。內容引起外界猜測，校方開始追問截圖來源。",
+  "choices": [
+   {
+    "t": "保存原始紀錄，先處理內容及保密問題",
+    "r": "你把焦點放回資訊處理及專業界線，並保留完整紀錄。",
+    "fx": {
+     "administration": 2,
+     "professional": 2,
+     "stress": 3
+    }
+   },
+   {
+    "t": "公開回應，逐點澄清",
+    "p": 0.35,
+    "r": "部分人理解你的立場，但事件仍然受到關注。",
+    "fx": {
+     "communication": 1,
+     "stress": 3
+    },
+    "r2": "討論擴大，校方要求停止公開評論。",
+    "fx2": {
+     "stress": 8,
+     "managementTrust": -3
+    }
+   },
+   {
+    "t": "要求主管按既定程序調查及回覆",
+    "r": "主管安排跟進，並提醒員工避免在網上討論內部事務。",
+    "fx": {
+     "administration": 1.5,
+     "managementTrust": 2,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_event_roster",
+  "title": "大型活動當值表失衡",
+  "type": "random",
+  "cat": "admin",
+  "cd": 9,
+  "desc": "一項為期多日的校內活動即將開始。初版當值表把最繁忙時段安排給少數同事，活動負責人卻只負責較少前線更次。",
+  "choices": [
+   {
+    "t": "按人手、風險及更次重新分配",
+    "r": "當值安排較平均，繁忙時段亦有足夠人手。",
+    "fx": {
+     "leadership": 1.5,
+     "administration": 1.5,
+     "relationship": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "先接受安排，避免引起衝突",
+    "p": 0.55,
+    "r": "活動勉強完成，但前線同事感到不公平。",
+    "fx": {
+     "relationship": -2,
+     "stress": 5,
+     "energy": -5
+    },
+    "r2": "繁忙時段出現人手不足，需臨時調動人員。",
+    "fx2": {
+     "stress": 8,
+     "managementTrust": -2,
+     "energy": -6
+    }
+   },
+   {
+    "t": "列出安全風險及最低人手要求",
+    "r": "主管認同先處理安全風險，再調整工作分配。",
+    "fx": {
+     "administration": 2,
+     "professional": 1,
+     "managementTrust": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_safety_single_staff",
+  "title": "活動人手不足",
+  "type": "random",
+  "cat": "work",
+  "cd": 8,
+  "desc": "你檢視活動安排時，發現學生最多、流程最複雜的時段只有一名老師當值。",
+  "choices": [
+   {
+    "t": "要求增加人手或縮減活動規模",
+    "r": "活動按可控規模進行，學生安全得到保障。",
+    "fx": {
+     "professional": 2,
+     "leadership": 1,
+     "managementTrust": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "自己頂上，確保活動如期舉行",
+    "p": 0.6,
+    "r": "活動順利完成，但你非常疲累。",
+    "fx": {
+     "satisfaction": 2,
+     "stress": 6,
+     "energy": -8
+    },
+    "r2": "突發情況令你難以兼顧，事後需要檢討安排。",
+    "fx2": {
+     "stress": 8,
+     "managementTrust": -2,
+     "energy": -8
+    }
+   },
+   {
+    "t": "提交風險評估及書面建議",
+    "r": "主管要求活動負責人補交風險評估，並重新安排人手。",
+    "fx": {
+     "administration": 1.5,
+     "professional": 1.5,
+     "stress": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_management_support",
+  "title": "管理層要求各打五十大板",
+  "type": "random",
+  "cat": "admin",
+  "cd": 14,
+  "desc": "你向管理層反映部門合作問題，對方卻把焦點放在雙方都有責任，未有清楚處理具體工作事實。",
+  "choices": [
+   {
+    "t": "要求列出具體改善事項及負責人",
+    "r": "會議紀錄列明跟進項目、時限及負責人，避免只停留在立場爭論。",
+    "fx": {
+     "administration": 2,
+     "communication": 1,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "接受安排，先維持日常運作",
+    "r": "短期內氣氛緩和，但根本問題未完全解決。",
+    "fx": {
+     "stress": -1,
+     "relationship": 1,
+     "satisfaction": -1
+    }
+   },
+   {
+    "t": "整理事件時間線及客觀證據再約會",
+    "p": 0.7,
+    "r": "主管願意重新檢視資料，討論變得具體。",
+    "fx": {
+     "administration": 2,
+     "professional": 1,
+     "stress": 2
+    },
+    "r2": "主管認為你重提舊事，暫時不作進一步跟進。",
+    "fx2": {
+     "stress": 5,
+     "managementTrust": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_no_guideline",
+  "title": "沒有清晰指引的責任追究",
+  "type": "random",
+  "cat": "admin",
+  "cd": 12,
+  "desc": "主管指出某項工作處理不當，但未能提供具體書面準則或既定流程。你需要決定如何回應。",
+  "choices": [
+   {
+    "t": "請主管提供書面標準及改善要求",
+    "r": "你取得清晰要求，日後亦較容易按同一標準執行。",
+    "fx": {
+     "administration": 2,
+     "communication": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "先按自己理解作出修正",
+    "p": 0.65,
+    "r": "今次問題得到改善，但標準仍然未完全一致。",
+    "fx": {
+     "efficiency": 1,
+     "managementTrust": 1
+    },
+    "r2": "主管認為修正方向不符期望，你要再花時間處理。",
+    "fx2": {
+     "stress": 4,
+     "managementTrust": -2
+    }
+   },
+   {
+    "t": "尋求正式會議確認部門權責",
+    "r": "部門工作分工得到重新確認。",
+    "fx": {
+     "leadership": 1.5,
+     "administration": 1.5,
+     "stress": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_performance_pressure",
+  "title": "考績評核壓力",
+  "type": "random",
+  "cat": "admin",
+  "cd": 12,
+  "desc": "你負責提交同事的工作評核。有人私下暗示你應調高分數，以免影響同事關係，但未有提供新的工作證據。",
+  "choices": [
+   {
+    "t": "堅持以既定準則及證據評分",
+    "r": "評核有清晰理據，雖然有人不滿，但專業界線得以維持。",
+    "fx": {
+     "professional": 2,
+     "resilience": 1,
+     "stress": 3
+    }
+   },
+   {
+    "t": "先向其他科主任查證評核慣例",
+    "r": "你核實了程序及慣例，再按一致標準處理。",
+    "fx": {
+     "administration": 1.5,
+     "communication": 1,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "按對方建議調整，避免衝突",
+    "p": 0.45,
+    "r": "短期內無人爭論，但你對評核公平性有所保留。",
+    "fx": {
+     "stress": -1,
+     "relationship": 1,
+     "satisfaction": -2
+    },
+    "r2": "日後有人質疑評核一致性，你需要重新解釋評分理據。",
+    "fx2": {
+     "stress": 6,
+     "professional": -1,
+     "managementTrust": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_workload_credit",
+  "title": "誰做了最多工作？",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 8,
+  "desc": "一項活動完成後，會議上有人把成果歸功於自己，卻沒有提及其他同事承擔的前線工作。",
+  "choices": [
+   {
+    "t": "以工作紀錄客觀列出分工",
+    "r": "大家看到實際分工，功勞及責任較清楚。",
+    "fx": {
+     "administration": 1.5,
+     "communication": 1,
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "不爭功，專注下一項工作",
+    "r": "你避免了爭論，但自己的付出未必被看見。",
+    "fx": {
+     "stress": -1,
+     "satisfaction": -1,
+     "relationship": 1
+    }
+   },
+   {
+    "t": "會後私下向主管反映",
+    "r": "主管了解情況，提醒日後活動要清楚記錄分工。",
+    "fx": {
+     "communication": 1,
+     "managementTrust": 1,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_coach_instruction",
+  "title": "專業判斷受到當眾干預",
+  "type": "random",
+  "cat": "work",
+  "cd": 9,
+  "desc": "你按學生能力作出進階教學安排，另一位同事卻在學生面前大聲質疑你的決定，認為你沒有處理正經工作。",
+  "choices": [
+   {
+    "t": "先確保學生安全及完成教學，再解釋理據",
+    "r": "學生學習沒有中斷，課後你亦能清楚交代教學目標。",
+    "fx": {
+     "teaching": 1.5,
+     "professional": 1.5,
+     "stress": 2
+    }
+   },
+   {
+    "t": "即場要求對方停止干預",
+    "p": 0.5,
+    "r": "對方收斂，課堂回復正常。",
+    "fx": {
+     "resilience": 1,
+     "satisfaction": 1
+    },
+    "r2": "雙方在學生面前爭論，影響課堂氣氛。",
+    "fx2": {
+     "stress": 6,
+     "studentRelation": -2
+    }
+   },
+   {
+    "t": "邀請科組檢視課程目標及教學分工",
+    "r": "科組確認教學自主及協作界線，減少日後誤會。",
+    "fx": {
+     "leadership": 1,
+     "administration": 1.5,
+     "relationship": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_28",
+  "title": "備課進度落後",
+  "type": "random",
+  "cat": "work",
+  "cd": 3,
+  "desc": "距離共同備課期限只剩數天，你手上的教材仍未整理好。",
+  "choices": [
+   {
+    "t": "先完成核心教學材料",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "teaching": 2,
+     "stress": 3,
+     "energy": -3
+    }
+   },
+   {
+    "t": "與同事分工整理",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "relationship": 2,
+     "stress": 1,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "沿用舊教材並作小修訂",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "efficiency": 1,
+     "teaching": -0.5
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_29",
+  "title": "學生拒絕交功課",
+  "type": "random",
+  "cat": "student",
+  "cd": 4,
+  "desc": "一名學生連續多次欠交功課，家長暫時未有回覆。",
+  "choices": [
+   {
+    "t": "課後了解原因",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "communication": 2,
+     "studentRelation": 3,
+     "energy": -2
+    }
+   },
+   {
+    "t": "按既定程序跟進",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "administration": 1,
+     "managementTrust": 1,
+     "studentRelation": -1
+    }
+   },
+   {
+    "t": "給予短期補交安排",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "studentRelation": 2,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_30",
+  "title": "同事臨時請假",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 5,
+  "desc": "同科同事突然請病假，幾項工作需要有人暫代。",
+  "choices": [
+   {
+    "t": "主動接手部分工作",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "relationship": 2,
+     "stress": 5,
+     "energy": -5
+    }
+   },
+   {
+    "t": "請科主任重新分配",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "administration": 1,
+     "managementTrust": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "只處理緊急項目",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "efficiency": 1,
+     "relationship": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_31",
+  "title": "會議議程臨時更改",
+  "type": "random",
+  "cat": "admin",
+  "cd": 6,
+  "desc": "會議開始前，管理層加入數項需要即場回應的新議題。",
+  "choices": [
+   {
+    "t": "先釐清優先次序",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "communication": 2,
+     "administration": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "即場提出影響及風險",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "leadership": 2,
+     "stress": 3,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "會後書面補充意見",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "administration": 2,
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_32",
+  "title": "家長要求額外支援",
+  "type": "random",
+  "cat": "parent",
+  "cd": 7,
+  "desc": "家長希望你在正常課堂以外，為子女提供更多個別協助。",
+  "choices": [
+   {
+    "t": "安排合理支援時段",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "studentRelation": 2,
+     "familyRelation": -1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "轉介校內支援同工",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "administration": 1,
+     "communication": 1
+    }
+   },
+   {
+    "t": "清楚說明可提供的界線",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "communication": 2,
+     "managementTrust": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_33",
+  "title": "校隊訓練場地撞期",
+  "type": "random",
+  "cat": "student",
+  "cd": 8,
+  "desc": "校隊訓練與另一項校內活動使用同一場地，雙方都不願讓步。",
+  "choices": [
+   {
+    "t": "協調分時使用",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "leadership": 1,
+     "relationship": 2,
+     "stress": 1
+    }
+   },
+   {
+    "t": "優先保障已確認活動",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "administration": 1,
+     "managementTrust": 1,
+     "studentRelation": -1
+    }
+   },
+   {
+    "t": "改到戶外場地",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "resilience": 1,
+     "energy": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_34",
+  "title": "採購報價出現差異",
+  "type": "random",
+  "cat": "admin",
+  "cd": 9,
+  "desc": "收到的採購報價與原先預算有明顯差異，截數日期又快到了。",
+  "choices": [
+   {
+    "t": "要求重新報價及書面解釋",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "administration": 2,
+     "stress": 2,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "調整採購規格",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "efficiency": 1,
+     "wealth": -300
+    }
+   },
+   {
+    "t": "向管理層申請額外預算",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "leadership": 1,
+     "stress": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_35",
+  "title": "同事分享教學資源",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 3,
+  "desc": "一位同事分享了一套實用教材，並邀請你試用後給予意見。",
+  "choices": [
+   {
+    "t": "試用並提供詳細回饋",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "teaching": 1,
+     "relationship": 2,
+     "professional": 1
+    }
+   },
+   {
+    "t": "整理後與科組分享",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "leadership": 1,
+     "professional": 2,
+     "stress": 2
+    }
+   },
+   {
+    "t": "先收藏，稍後再看",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_36",
+  "title": "學生在網上發文",
+  "type": "random",
+  "cat": "student",
+  "cd": 4,
+  "desc": "你發現學生在社交平台發布涉及班級生活的爭議內容。",
+  "choices": [
+   {
+    "t": "先了解學生及事件背景",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "communication": 2,
+     "studentRelation": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "按校內程序通報",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "administration": 2,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "與班主任協作跟進",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "relationship": 1,
+     "leadership": 1,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_37",
+  "title": "家長日時間不足",
+  "type": "random",
+  "cat": "parent",
+  "cd": 5,
+  "desc": "家長日預約比預期多，部分家長可能需要延長面談時間。",
+  "choices": [
+   {
+    "t": "按需要調整面談次序",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "communication": 2,
+     "stress": 3,
+     "energy": -3
+    }
+   },
+   {
+    "t": "安排後續電話跟進",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "efficiency": 1,
+     "familyRelation": 1
+    }
+   },
+   {
+    "t": "請同事協助接待",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "relationship": 2,
+     "managementTrust": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_38",
+  "title": "校內活動天氣不穩",
+  "type": "random",
+  "cat": "work",
+  "cd": 6,
+  "desc": "大型戶外活動前夕天氣預報轉差，替代方案尚未落實。",
+  "choices": [
+   {
+    "t": "啟動室內後備方案",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "leadership": 2,
+     "administration": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "縮短活動並保留核心環節",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "efficiency": 2,
+     "satisfaction": -1
+    }
+   },
+   {
+    "t": "等待最新天氣資訊",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": 3,
+     "energy": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_39",
+  "title": "新教師適應困難",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 7,
+  "desc": "新入職同事表示難以適應工作節奏，亦擔心向上司求助會留下壞印象。",
+  "choices": [
+   {
+    "t": "定期提供具體支援",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "relationship": 3,
+     "leadership": 1,
+     "energy": -2
+    }
+   },
+   {
+    "t": "陪同整理工作優先次序",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "communication": 2,
+     "professional": 1
+    }
+   },
+   {
+    "t": "建議向科主任提出需要",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "administration": 1,
+     "relationship": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_40",
+  "title": "學生比賽失利",
+  "type": "random",
+  "cat": "student",
+  "cd": 8,
+  "desc": "校隊在重要比賽落敗，幾名學生情緒低落，認為自己辜負學校。",
+  "choices": [
+   {
+    "t": "與學生檢討過程而非只看名次",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "studentRelation": 3,
+     "satisfaction": 2
+    }
+   },
+   {
+    "t": "安排短暫休息再訓練",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "resilience": 1,
+     "stress": -2
+    }
+   },
+   {
+    "t": "立即加強訓練",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "teaching": 1,
+     "stress": 4,
+     "energy": -4
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_41",
+  "title": "教學觀課通知",
+  "type": "random",
+  "cat": "career",
+  "cd": 9,
+  "desc": "你收到觀課通知，觀課重點包括課堂互動及學習差異照顧。",
+  "choices": [
+   {
+    "t": "重新設計課堂活動",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "teaching": 2,
+     "professional": 1,
+     "stress": 3
+    }
+   },
+   {
+    "t": "與資深同事共同備課",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "relationship": 2,
+     "teaching": 1
+    }
+   },
+   {
+    "t": "按日常教學方式準備",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": -1,
+     "managementTrust": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_42",
+  "title": "科組預算削減",
+  "type": "random",
+  "cat": "admin",
+  "cd": 3,
+  "desc": "新學年科組預算被削減，需要重新安排教材及活動支出。",
+  "choices": [
+   {
+    "t": "保留核心教學資源",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "leadership": 1,
+     "teaching": 1,
+     "satisfaction": -1
+    }
+   },
+   {
+    "t": "與其他科組共享資源",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "relationship": 2,
+     "efficiency": 1
+    }
+   },
+   {
+    "t": "提出分階段採購",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "administration": 2,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_43",
+  "title": "學生情緒失控",
+  "type": "random",
+  "cat": "student",
+  "cd": 4,
+  "desc": "學生在課堂上突然情緒激動，拒絕繼續參與課堂。",
+  "choices": [
+   {
+    "t": "先確保安全並給予冷靜空間",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "studentRelation": 3,
+     "resilience": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "尋求校內支援人員協助",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "administration": 1,
+     "relationship": 1
+    }
+   },
+   {
+    "t": "暫停課堂並稍後跟進",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": -1,
+     "teaching": -0.5
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_44",
+  "title": "跨科合作邀請",
+  "type": "random",
+  "cat": "career",
+  "cd": 5,
+  "desc": "另一科組邀請你參與跨科專題，工作有趣但需要額外協調。",
+  "choices": [
+   {
+    "t": "接受並擔任協調角色",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "leadership": 2,
+     "professional": 2,
+     "stress": 4
+    }
+   },
+   {
+    "t": "參與部分工作",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "professional": 1,
+     "relationship": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "婉拒並說明現有工作量",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": -2,
+     "managementTrust": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_45",
+  "title": "同事對分工有異議",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 6,
+  "desc": "同事認為近期工作分配不平均，並在教員室公開提出不滿。",
+  "choices": [
+   {
+    "t": "邀請對方私下討論具體分工",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "communication": 2,
+     "relationship": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "公開檢視工作清單",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "leadership": 1,
+     "administration": 2
+    }
+   },
+   {
+    "t": "先完成當前工作再處理",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "efficiency": 1,
+     "relationship": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_46",
+  "title": "校園設備故障",
+  "type": "random",
+  "cat": "admin",
+  "cd": 7,
+  "desc": "上課前發現教學設備故障，維修人員未能即時到場。",
+  "choices": [
+   {
+    "t": "改用低科技教學方案",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "teaching": 1,
+     "resilience": 1
+    }
+   },
+   {
+    "t": "聯絡校工及資訊支援",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "relationship": 1,
+     "administration": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "調動課室設備",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "efficiency": 1,
+     "energy": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_47",
+  "title": "校外機構合作",
+  "type": "random",
+  "cat": "professional",
+  "cd": 8,
+  "desc": "外部機構邀請學校參與教育活動，要求短時間內確認代表及安排。",
+  "choices": [
+   {
+    "t": "先核實內容與責任",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "administration": 1,
+     "professional": 1,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "爭取成為學校代表",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "professional": 3,
+     "leadership": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "推薦合適同事參與",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "relationship": 2,
+     "managementTrust": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_48",
+  "title": "考試後檢討會",
+  "type": "random",
+  "cat": "admin",
+  "cd": 9,
+  "desc": "考試數據顯示部分班別表現落差較大，管理層希望科組提出改善方案。",
+  "choices": [
+   {
+    "t": "以數據分析學習差異",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "professional": 2,
+     "administration": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "與教師共同制定支援措施",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "leadership": 1,
+     "relationship": 2
+    }
+   },
+   {
+    "t": "先集中處理最急切班別",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "efficiency": 1,
+     "teaching": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_49",
+  "title": "家庭聚會與工作撞期",
+  "type": "random",
+  "cat": "family",
+  "cd": 3,
+  "desc": "家人早已安排聚會，但學校臨時要求你出席一項重要活動。",
+  "choices": [
+   {
+    "t": "與學校協商提早離開",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "familyRelation": 3,
+     "communication": 1,
+     "managementTrust": -1
+    }
+   },
+   {
+    "t": "優先出席學校活動",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "managementTrust": 2,
+     "familyRelation": -4,
+     "stress": 2
+    }
+   },
+   {
+    "t": "請同事代為出席部分環節",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "relationship": 1,
+     "familyRelation": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_50",
+  "title": "長期睡眠不足",
+  "type": "random",
+  "cat": "health",
+  "cd": 4,
+  "desc": "你連續幾星期睡眠不足，開始難以集中精神處理日常工作。",
+  "choices": [
+   {
+    "t": "減少非必要額外工作",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "stress": -5,
+     "energy": 5,
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "安排求醫及休息",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "wealth": -500,
+     "energy": 8,
+     "stress": -4
+    }
+   },
+   {
+    "t": "暫時硬撐至忙季結束",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": 5,
+     "energy": -6
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_51",
+  "title": "個人進修選擇",
+  "type": "random",
+  "cat": "professional",
+  "cd": 5,
+  "desc": "你考慮報讀一項進修課程，內容有助職涯但需要佔用週末。",
+  "choices": [
+   {
+    "t": "報讀並訂立學習計劃",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "professional": 3,
+     "wealth": -1200,
+     "stress": 2
+    }
+   },
+   {
+    "t": "先參加短期工作坊",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "professional": 1,
+     "wealth": -300
+    }
+   },
+   {
+    "t": "暫緩進修，先照顧生活",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "familyRelation": 1,
+     "stress": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_52",
+  "title": "學生需要額外照顧",
+  "type": "random",
+  "cat": "student",
+  "cd": 6,
+  "desc": "你留意到一名學生在課堂參與及同儕互動方面持續遇到困難。",
+  "choices": [
+   {
+    "t": "與家長及支援團隊協作",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "communication": 2,
+     "studentRelation": 2,
+     "administration": 1
+    }
+   },
+   {
+    "t": "調整課堂活動",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "teaching": 2,
+     "professional": 1,
+     "energy": -2
+    }
+   },
+   {
+    "t": "先觀察並記錄情況",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "administration": 1,
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_53",
+  "title": "學校形象活動邀請",
+  "type": "random",
+  "cat": "admin",
+  "cd": 7,
+  "desc": "管理層希望你代表學校參與公開活動，活動曝光度高但準備時間短。",
+  "choices": [
+   {
+    "t": "接受並認真準備",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "leadership": 2,
+     "stress": 4,
+     "energy": -3,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "要求明確工作範圍",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "communication": 2,
+     "administration": 1
+    }
+   },
+   {
+    "t": "推薦更合適人選",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "relationship": 1,
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_54",
+  "title": "同事獲得晉升",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 8,
+  "desc": "與你資歷相近的同事獲得晉升，教員室開始議論遴選標準。",
+  "choices": [
+   {
+    "t": "向對方祝賀並了解經驗",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "relationship": 2,
+     "professional": 1
+    }
+   },
+   {
+    "t": "檢視自己的發展方向",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "professional": 2,
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "向管理層詢問發展回饋",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "communication": 1,
+     "stress": 2,
+     "managementTrust": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_55",
+  "title": "學生領袖提出建議",
+  "type": "random",
+  "cat": "student",
+  "cd": 9,
+  "desc": "學生領袖提出改善校園活動的建議，想知道老師是否願意支持。",
+  "choices": [
+   {
+    "t": "讓學生主導小型試行",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "leadership": 2,
+     "studentRelation": 3,
+     "stress": 1
+    }
+   },
+   {
+    "t": "先評估安全及資源",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "administration": 1,
+     "studentRelation": 1
+    }
+   },
+   {
+    "t": "暫時維持現有安排",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": -1,
+     "studentRelation": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_56",
+  "title": "工作電郵深夜湧入",
+  "type": "random",
+  "cat": "health",
+  "cd": 3,
+  "desc": "晚上仍不斷收到工作訊息，部分內容並非翌日必須處理。",
+  "choices": [
+   {
+    "t": "設定非緊急訊息回覆界線",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "stress": -4,
+     "familyRelation": 2,
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "逐一即時回覆",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "managementTrust": 1,
+     "stress": 4,
+     "energy": -3
+    }
+   },
+   {
+    "t": "只處理真正緊急事項",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "efficiency": 1,
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_57",
+  "title": "學校推行新制度",
+  "type": "random",
+  "cat": "admin",
+  "cd": 4,
+  "desc": "學校準備推行新的行政流程，前線教師擔心增加紀錄工作。",
+  "choices": [
+   {
+    "t": "參與試行並提出改善",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "leadership": 2,
+     "administration": 2,
+     "stress": 2
+    }
+   },
+   {
+    "t": "先了解制度目的及要求",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "professional": 1,
+     "communication": 1
+    }
+   },
+   {
+    "t": "按指引執行並觀察",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "administration": 1,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_58",
+  "title": "退休同事交接",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 5,
+  "desc": "一位資深同事即將退休，手上保存不少未有正式整理的工作資料。",
+  "choices": [
+   {
+    "t": "協助整理及建立交接檔案",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "administration": 2,
+     "relationship": 2,
+     "professional": 1
+    }
+   },
+   {
+    "t": "邀請同事分享經驗",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "professional": 2,
+     "relationship": 1
+    }
+   },
+   {
+    "t": "只接收與自己職務相關資料",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_59",
+  "title": "個人興趣活動",
+  "type": "random",
+  "cat": "personal",
+  "cd": 6,
+  "desc": "朋友邀請你參加一項長期興趣活動，能帶來生活新鮮感但需要固定時間。",
+  "choices": [
+   {
+    "t": "每月預留時間參與",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "satisfaction": 3,
+     "stress": -2,
+     "wealth": -300
+    }
+   },
+   {
+    "t": "偶爾參與，不作承諾",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "婉拒，集中處理工作",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "managementTrust": 1,
+     "stress": 1,
+     "satisfaction": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_exp_60",
+  "title": "年度工作自評",
+  "type": "random",
+  "cat": "career",
+  "cd": 7,
+  "desc": "學年接近尾聲，你需要整理年度工作成果及下一年的專業目標。",
+  "choices": [
+   {
+    "t": "如實整理成果與不足",
+    "r": "你作出選擇，事情按新的方向發展。",
+    "fx": {
+     "professional": 2,
+     "administration": 2,
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "突出具體成果及數據",
+    "r": "你採取折衷或協作方式，亦需要承擔相應代價。",
+    "fx": {
+     "managementTrust": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "簡短完成基本要求",
+    "r": "你選擇另一種處理方法，短期壓力有所不同。",
+    "fx": {
+     "stress": -1,
+     "managementTrust": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_oct",
+  "title": "校內活動籌備",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    10
+   ]
+  ],
+  "cd": 11,
+  "desc": "活動委員會要求各科提交工作計劃，時間表開始重疊。",
+  "choices": [
+   {
+    "t": "主動統籌跨科時間表",
+    "r": "行政及領導能力提升，但工作量增加。",
+    "fx": {
+     "administration": 1,
+     "leadership": 1,
+     "stress": 4,
+     "energy": -4
+    }
+   },
+   {
+    "t": "先確認人手及資源",
+    "r": "安排較穩妥，管理層信任增加。",
+    "fx": {
+     "managementTrust": 2,
+     "stress": 1
+    }
+   },
+   {
+    "t": "提出縮減活動規模",
+    "r": "保留教學時間，但部分同事失望。",
+    "fx": {
+     "stress": -2,
+     "relationship": -1,
+     "managementTrust": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_jan",
+  "title": "下學期工作部署",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    1
+   ]
+  ],
+  "cd": 11,
+  "desc": "新學期開始前，管理層要求更新工作分配及課程進度。",
+  "choices": [
+   {
+    "t": "整理完整工作清單",
+    "r": "效率及行政能力提升。",
+    "fx": {
+     "efficiency": 2,
+     "administration": 1,
+     "stress": 2
+    }
+   },
+   {
+    "t": "與同事共同規劃",
+    "r": "團隊關係改善。",
+    "fx": {
+     "relationship": 2,
+     "leadership": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "只處理最急切事項",
+    "r": "短期減壓，但部分工作延誤。",
+    "fx": {
+     "stress": -2,
+     "managementTrust": -2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_feb",
+  "title": "家長日後續跟進",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    2
+   ]
+  ],
+  "cd": 11,
+  "desc": "家長日後有數個個案需要持續跟進。",
+  "choices": [
+   {
+    "t": "逐一安排跟進會面",
+    "r": "家長及學生關係改善。",
+    "fx": {
+     "communication": 2,
+     "studentRelation": 2,
+     "stress": 3
+    }
+   },
+   {
+    "t": "交由合適同事跟進",
+    "r": "善用團隊資源。",
+    "fx": {
+     "leadership": 1,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "以書面回覆為主",
+    "r": "節省時間，但關係改善有限。",
+    "fx": {
+     "stress": -1,
+     "communication": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_apr",
+  "title": "陸運會及戶外活動",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    4
+   ]
+  ],
+  "cd": 11,
+  "desc": "學校進入活動旺季，場地、天氣及安全安排需要協調。",
+  "choices": [
+   {
+    "t": "親自負責安全及流程",
+    "r": "領導能力提升，但體力消耗。",
+    "fx": {
+     "leadership": 2,
+     "stress": 4,
+     "energy": -6
+    }
+   },
+   {
+    "t": "安排同事分工並檢查",
+    "r": "團隊合作及效率提升。",
+    "fx": {
+     "leadership": 1,
+     "efficiency": 1,
+     "relationship": 1
+    }
+   },
+   {
+    "t": "建議簡化活動",
+    "r": "減少風險及工作量。",
+    "fx": {
+     "stress": -2,
+     "managementTrust": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_may",
+  "title": "考試及年度評核",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    5
+   ]
+  ],
+  "cd": 11,
+  "desc": "考試工作與年度評核同時逼近，需要取捨。",
+  "choices": [
+   {
+    "t": "集中處理教學及評核證據",
+    "r": "專業表現提升，壓力增加。",
+    "fx": {
+     "teaching": 1,
+     "professional": 2,
+     "stress": 4,
+     "energy": -5
+    }
+   },
+   {
+    "t": "先安排團隊分工",
+    "r": "行政能力及團隊關係改善。",
+    "fx": {
+     "administration": 2,
+     "leadership": 1,
+     "stress": 1
+    }
+   },
+   {
+    "t": "保留時間休息",
+    "r": "健康及精力改善，但工作進度稍慢。",
+    "fx": {
+     "health": 2,
+     "energy": 5,
+     "stress": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_jun",
+  "title": "畢業禮及年度總結",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    6
+   ]
+  ],
+  "cd": 11,
+  "desc": "畢業禮將至，學生及家長對過去一年有不同回饋。",
+  "choices": [
+   {
+    "t": "投入畢業活動",
+    "r": "學生關係及滿意度提升。",
+    "fx": {
+     "studentRelation": 3,
+     "satisfaction": 2,
+     "stress": 2
+    }
+   },
+   {
+    "t": "整理年度工作成果",
+    "r": "專業聲譽及管理層信任提升。",
+    "fx": {
+     "professional": 1,
+     "managementTrust": 2,
+     "stress": 1
+    }
+   },
+   {
+    "t": "將工作交接予同事",
+    "r": "減少過勞，團隊關係改善。",
+    "fx": {
+     "stress": -2,
+     "energy": 3,
+     "relationship": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_jul",
+  "title": "暑期工作交接",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    7
+   ]
+  ],
+  "cd": 11,
+  "desc": "學生放暑假，但校內仍有課程檢討、採購及工作交接。",
+  "choices": [
+   {
+    "t": "完成課程檢討及文件",
+    "r": "專業及行政能力提升。",
+    "fx": {
+     "professional": 1,
+     "administration": 2,
+     "stress": 3
+    }
+   },
+   {
+    "t": "參與暑期進修",
+    "r": "累積專業能力。",
+    "fx": {
+     "professional": 2,
+     "satisfaction": 1,
+     "wealth": -800
+    }
+   },
+   {
+    "t": "提早安排休息",
+    "r": "恢復健康及精力。",
+    "fx": {
+     "health": 2,
+     "energy": 6,
+     "stress": -4
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_aug",
+  "title": "新學年準備",
+  "type": "scheduled",
+  "cat": "work",
+  "cond": [
+   [
+    "month",
+    "==",
+    8
+   ]
+  ],
+  "cd": 11,
+  "desc": "新學年快將開始，學校要求確認課程、人手及資源。",
+  "choices": [
+   {
+    "t": "提早準備教材",
+    "r": "教學能力提升，開學更順利。",
+    "fx": {
+     "teaching": 2,
+     "stress": 2,
+     "energy": -2
+    }
+   },
+   {
+    "t": "檢視團隊工作分配",
+    "r": "領導及行政能力提升。",
+    "fx": {
+     "leadership": 1,
+     "administration": 1,
+     "relationship": 1
+    }
+   },
+   {
+    "t": "把握最後假期休息",
+    "r": "健康及滿意度改善。",
+    "fx": {
+     "health": 2,
+     "satisfaction": 2,
+     "energy": 4
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_curr_reform",
+  "title": "課程改革諮詢",
+  "type": "random",
+  "cat": "work",
+  "cd": 18,
+  "desc": "教育局公布課程調整方向，校方邀請各科教師提交意見。",
+  "choices": [
+   {
+    "t": "組織科內討論並提交詳細意見",
+    "r": "意見獲校方重視，但佔用不少時間。",
+    "fx": {
+     "professional": 2,
+     "leadership": 1,
+     "managementTrust": 2,
+     "stress": 4,
+     "energy": -5
+    }
+   },
+   {
+    "t": "只提交簡短回應",
+    "r": "按時完成，影響不大。",
+    "fx": {
+     "stress": 1,
+     "energy": -1
+    }
+   },
+   {
+    "t": "先觀察其他科組的取向",
+    "r": "你避開了額外工作，但錯過發聲機會。",
+    "fx": {
+     "managementTrust": -1,
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_cross_dept",
+  "title": "跨科專題統籌",
+  "type": "conditional",
+  "cat": "admin",
+  "cd": 14,
+  "desc": "校方希望推行跨科專題學習，需要有人統籌各科進度。",
+  "choices": [
+   {
+    "t": "主動統籌",
+    "r": "協調過程繁瑣，但成果令人滿意。",
+    "fx": {
+     "administration": 2,
+     "leadership": 2,
+     "professional": 1,
+     "managementTrust": 2,
+     "stress": 7,
+     "energy": -8
+    }
+   },
+   {
+    "t": "提出以分工表由各科自行負責",
+    "r": "節省心力，但整合程度有限。",
+    "fx": {
+     "administration": 1,
+     "stress": 2,
+     "energy": -3
+    }
+   },
+   {
+    "t": "建議交由課程組處理",
+    "r": "避免承擔，但同事覺得你缺乏參與。",
+    "fx": {
+     "relationship": -1,
+     "stress": -1
+    }
+   }
+  ],
+  "cond": [
+   [
+    "path",
+    "==",
+    "curriculum"
+   ]
+  ],
+  "max": 4
+ },
+ {
+  "id": "e_moderation",
+  "title": "校內評估統一標準",
+  "type": "random",
+  "cat": "admin",
+  "cd": 14,
+  "desc": "各班評分差異偏大，科組需要重新校準評分準則。",
+  "choices": [
+   {
+    "t": "參與校準並整理示例",
+    "r": "評分更一致，同事感激你的整理。",
+    "fx": {
+     "administration": 1,
+     "professional": 1,
+     "relationship": 1,
+     "stress": 3,
+     "energy": -4
+    }
+   },
+   {
+    "t": "只調整自己班別",
+    "r": "工作量不變，但科內問題仍在。",
+    "fx": {
+     "stress": 0
+    }
+   },
+   {
+    "t": "提出由學校統一系統處理",
+    "r": "建議被接納，但需要較多溝通。",
+    "fx": {
+     "leadership": 1,
+     "managementTrust": 1,
+     "stress": 4,
+     "energy": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_inspect",
+  "title": "視學前準備",
+  "type": "random",
+  "cat": "admin",
+  "cd": 24,
+  "desc": "學校將接受教育局視學，文件及課堂都需要準備。",
+  "choices": [
+   {
+    "t": "全力準備教案及文件",
+    "r": "視學表現良好，但身心疲累。",
+    "fx": {
+     "teaching": 1,
+     "managementTrust": 3,
+     "stress": 9,
+     "energy": -10,
+     "satisfaction": -1
+    }
+   },
+   {
+    "t": "按平日水平展示真實課堂",
+    "r": "結果普通，但你保持了節奏。",
+    "fx": {
+     "managementTrust": 0,
+     "stress": 2,
+     "energy": -2
+    }
+   },
+   {
+    "t": "請同事協助分擔文件工作",
+    "r": "文件順利完成，你需要回饋同事。",
+    "fx": {
+     "relationship": 1,
+     "administration": 1,
+     "stress": 4,
+     "energy": -4
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_ai_tools",
+  "title": "學生使用 AI 工具完成功課",
+  "type": "random",
+  "cat": "student",
+  "cd": 14,
+  "desc": "部分學生用 AI 工具完成功課，科組對處理方式意見不一。",
+  "choices": [
+   {
+    "t": "設計需要說明思考過程的功課",
+    "r": "學生更投入，但批改時間增加。",
+    "fx": {
+     "teaching": 2,
+     "professional": 1,
+     "studentRelation": 1,
+     "stress": 4,
+     "energy": -5
+    }
+   },
+   {
+    "t": "嚴格禁止並加強課堂寫作",
+    "r": "減少舞弊，但部分學生感到被不信任。",
+    "fx": {
+     "studentRelation": -2,
+     "stress": 2
+    }
+   },
+   {
+    "t": "與學生討論如何負責任地使用",
+    "r": "氣氛開放，但需要建立新準則。",
+    "fx": {
+     "communication": 2,
+     "studentRelation": 2,
+     "stress": 3,
+     "energy": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_grade_dispute",
+  "title": "家長質疑評分",
+  "type": "random",
+  "cat": "parent",
+  "cd": 10,
+  "desc": "有家長認為孩子的分數偏低，要求重新檢視。",
+  "choices": [
+   {
+    "t": "以評分準則及例子詳細解釋",
+    "r": "家長明白，但花了不少時間。",
+    "fx": {
+     "communication": 2,
+     "stress": 4,
+     "energy": -4,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "轉介科主任處理",
+    "r": "事件由科主任跟進，你鬆一口氣。",
+    "fx": {
+     "stress": -1,
+     "managementTrust": -1
+    }
+   },
+   {
+    "t": "同意覆核並提供回饋",
+    "r": "結果維持，但家長滿意你的專業態度。",
+    "fx": {
+     "professional": 1,
+     "communication": 1,
+     "stress": 3,
+     "energy": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_pd_day",
+  "title": "教師專業發展日",
+  "type": "random",
+  "cat": "professional",
+  "cd": 12,
+  "desc": "學校安排專業發展日，題目包括課堂研究、學生支援及科技教學。",
+  "choices": [
+   {
+    "t": "積極參與並準備分享",
+    "r": "你學到不少，也建立了人脈。",
+    "fx": {
+     "professional": 2,
+     "relationship": 1,
+     "stress": 2,
+     "energy": -3
+    }
+   },
+   {
+    "t": "只出席主要環節",
+    "r": "有所得益，但未深入。",
+    "fx": {
+     "professional": 1,
+     "energy": -1
+    }
+   },
+   {
+    "t": "趁機處理積壓的批改",
+    "r": "工作清理了一部分，但錯過學習機會。",
+    "fx": {
+     "efficiency": 1,
+     "stress": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_task_dispute",
+  "title": "科內分工爭議",
+  "type": "random",
+  "cat": "colleague",
+  "cd": 12,
+  "desc": "科內對下學期任務分配出現不同意見。",
+  "choices": [
+   {
+    "t": "提出輪流及量化工作量的方案",
+    "r": "方案被接納，同事認為公平。",
+    "fx": {
+     "leadership": 2,
+     "relationship": 2,
+     "stress": 4,
+     "energy": -3
+    }
+   },
+   {
+    "t": "接受額外任務以化解僵局",
+    "r": "氣氛緩和，但你要承擔更多。",
+    "fx": {
+     "relationship": 2,
+     "stress": 6,
+     "energy": -6,
+     "managementTrust": 1
+    }
+   },
+   {
+    "t": "堅持原有分工",
+    "r": "維持現狀，但關係稍為緊張。",
+    "fx": {
+     "relationship": -2,
+     "stress": 2
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_bullying",
+  "title": "班內欺凌個案",
+  "type": "random",
+  "cat": "student",
+  "cd": 12,
+  "desc": "你發現班內有學生被孤立及排擠。",
+  "choices": [
+   {
+    "t": "即時介入並聯絡社工及家長",
+    "r": "個案得到處理，學生重拾信心。",
+    "fx": {
+     "studentRelation": 3,
+     "communication": 1,
+     "resilience": 1,
+     "stress": 7,
+     "energy": -7
+    }
+   },
+   {
+    "t": "先觀察再決定",
+    "r": "拖延讓情況持續，你感到不安。",
+    "fx": {
+     "studentRelation": -2,
+     "stress": 4
+    }
+   },
+   {
+    "t": "交由訓輔組處理並保持跟進",
+    "r": "分工清晰，你仍定期關心。",
+    "fx": {
+     "studentRelation": 1,
+     "stress": 3,
+     "energy": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_student_crisis",
+  "title": "學生情緒危機求助",
+  "type": "conditional",
+  "cat": "student",
+  "cd": 10,
+  "desc": "一名學生向你透露近期情緒低落，你是他最信任的老師。",
+  "choices": [
+   {
+    "t": "耐心聆聽並安排專業支援",
+    "r": "學生得到適切跟進，你也承受情緒負荷。",
+    "fx": {
+     "studentRelation": 4,
+     "communication": 2,
+     "resilience": 1,
+     "stress": 8,
+     "energy": -8,
+     "satisfaction": 2
+    }
+   },
+   {
+    "t": "轉介輔導人員並保持關心",
+    "r": "處理適當，負擔較輕。",
+    "fx": {
+     "studentRelation": 2,
+     "stress": 3,
+     "energy": -3
+    }
+   },
+   {
+    "t": "建議學生先自行調整",
+    "r": "學生感到被忽略。",
+    "fx": {
+     "studentRelation": -3,
+     "satisfaction": -2
+    }
+   }
+  ],
+  "cond": [
+   [
+    "path",
+    "==",
+    "student"
+   ]
+  ],
+  "max": 6
+ },
+ {
+  "id": "e_open_class",
+  "title": "邀請開放課堂",
+  "type": "conditional",
+  "cat": "work",
+  "cd": 12,
+  "desc": "科組邀請你示範課堂，供全校教師觀課。",
+  "choices": [
+   {
+    "t": "接受並設計創新課堂",
+    "r": "課堂獲好評，你的專業形象提升。",
+    "fx": {
+     "teaching": 3,
+     "professional": 1,
+     "communication": 1,
+     "managementTrust": 2,
+     "stress": 6,
+     "energy": -6
+    }
+   },
+   {
+    "t": "以穩定的常規課堂示範",
+    "r": "表現穩健，反應中規中矩。",
+    "fx": {
+     "teaching": 1,
+     "stress": 2,
+     "energy": -2
+    }
+   },
+   {
+    "t": "婉拒，專注自己的課堂",
+    "r": "保持節奏，但錯過曝光。",
+    "fx": {
+     "stress": -1,
+     "managementTrust": -1
+    }
+   }
+  ],
+  "cond": [
+   [
+    "path",
+    "==",
+    "teaching"
+   ]
+  ],
+  "max": 5
+ },
+ {
+  "id": "e_research_grant",
+  "title": "教育研究資助申請",
+  "type": "conditional",
+  "cat": "professional",
+  "cd": 12,
+  "desc": "你有機會申請教育研究資助，成功可獲資源但要交研究報告。",
+  "choices": [
+   {
+    "t": "提交申請並規劃研究",
+    "r": "申請需要大量準備。",
+    "fx": {
+     "professional": 2,
+     "stress": 6,
+     "energy": -6
+    },
+    "p": 0.55,
+    "r2": "申請未成功，但學到寫作技巧。",
+    "fx2": {
+     "professional": 1,
+     "stress": 3,
+     "energy": -3
+    }
+   },
+   {
+    "t": "與同事合作申請",
+    "r": "分工後負擔較輕，成功率相約。",
+    "fx": {
+     "professional": 1,
+     "relationship": 1,
+     "stress": 3,
+     "energy": -3
+    }
+   },
+   {
+    "t": "暫時不申請",
+    "r": "把精力留給課堂。",
+    "fx": {
+     "stress": -1
+    }
+   }
+  ],
+  "cond": [
+   [
+    "path",
+    "==",
+    "study"
+   ]
+  ],
+  "max": 4
+ },
+ {
+  "id": "e_innov_setback",
+  "title": "創新項目遇上資源限制",
+  "type": "conditional",
+  "cat": "work",
+  "cd": 10,
+  "desc": "你推動的教學創新項目遇到預算及制度限制。",
+  "choices": [
+   {
+    "t": "縮小規模先行試點",
+    "r": "項目縮減但保持進度。",
+    "fx": {
+     "professional": 1,
+     "efficiency": 1,
+     "stress": 3,
+     "energy": -3
+    }
+   },
+   {
+    "t": "向校方爭取額外資源",
+    "r": "能否成功視乎校方優先次序。",
+    "fx": {
+     "leadership": 1,
+     "stress": 5,
+     "energy": -4
+    },
+    "p": 0.5,
+    "r2": "申請被拒，項目暫時擱置。",
+    "fx2": {
+     "managementTrust": -1,
+     "stress": 4
+    }
+   },
+   {
+    "t": "暫停項目並檢討",
+    "r": "你冷靜檢視問題，士氣稍受影響。",
+    "fx": {
+     "satisfaction": -1,
+     "stress": -1
+    }
+   }
+  ],
+  "cond": [
+   [
+    "path",
+    "==",
+    "innovation"
+   ]
+  ],
+  "max": 6
+ },
+ {
+  "id": "e_board_politics",
+  "title": "校董會及人事角力",
+  "type": "conditional",
+  "cat": "admin",
+  "cd": 12,
+  "desc": "校董會對下一屆管理層安排出現分歧，各方嘗試爭取你的支持。",
+  "choices": [
+   {
+    "t": "保持中立並專注學校利益",
+    "r": "你贏得尊重，但沒有盟友。",
+    "fx": {
+     "leadership": 1,
+     "managementTrust": 1,
+     "stress": 5,
+     "energy": -4
+    }
+   },
+   {
+    "t": "支持其中一方",
+    "r": "得到重要盟友，也樹立對手。",
+    "fx": {
+     "managementTrust": 3,
+     "relationship": -2,
+     "stress": 7,
+     "energy": -5
+    },
+    "p": 0.6,
+    "r2": "支持的一方落敗，你處境尷尬。",
+    "fx2": {
+     "managementTrust": -4,
+     "stress": 6
+    }
+   },
+   {
+    "t": "以專業理由婉拒表態",
+    "r": "避免捲入，但被認為保守。",
+    "fx": {
+     "managementTrust": -1,
+     "stress": 2
+    }
+   }
+  ],
+  "cond": [
+   [
+    "rank",
+    ">=",
+    6
+   ]
+  ],
+  "max": 4
+ },
+ {
+  "id": "e_dept_budget",
+  "title": "科組預算削減",
+  "type": "conditional",
+  "cat": "admin",
+  "cd": 12,
+  "desc": "校方要求各科組削減下年度預算。",
+  "choices": [
+   {
+    "t": "重新規劃並優先保障核心活動",
+    "r": "過程艱難，但組員理解。",
+    "fx": {
+     "administration": 2,
+     "leadership": 1,
+     "stress": 6,
+     "energy": -5
+    }
+   },
+   {
+    "t": "爭取維持原有預算",
+    "r": "結果未必理想，但你努力過。",
+    "fx": {
+     "managementTrust": 1,
+     "stress": 5,
+     "energy": -4
+    },
+    "p": 0.4,
+    "r2": "預算仍被削減，你需補做安排。",
+    "fx2": {
+     "managementTrust": -1,
+     "stress": 7,
+     "energy": -6
+    }
+   },
+   {
+    "t": "按比例平均削減",
+    "r": "簡單直接，組員沒有太大反應。",
+    "fx": {
+     "stress": 2
+    }
+   }
+  ],
+  "cond": [
+   [
+    "path",
+    "==",
+    "management"
+   ]
+  ],
+  "max": 4
+ },
+ {
+  "id": "e_family_medical",
+  "title": "家人突發醫療開支",
+  "type": "random",
+  "cat": "family",
+  "cd": 18,
+  "desc": "家人突然需要檢查及治療，費用不低。",
+  "choices": [
+   {
+    "t": "以私家服務盡快處理",
+    "r": "家人安心，但開支不少。",
+    "fx": {
+     "wealth": -15000,
+     "familyRelation": 3,
+     "stress": -2
+    }
+   },
+   {
+    "t": "使用公共服務並陪診",
+    "r": "節省開支，但需要請假及輪候。",
+    "fx": {
+     "familyRelation": 3,
+     "stress": 5,
+     "energy": -6
+    }
+   },
+   {
+    "t": "兩者併用",
+    "r": "折衷處理。",
+    "fx": {
+     "wealth": -6000,
+     "familyRelation": 2,
+     "stress": 2,
+     "energy": -3
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_housing",
+  "title": "租金及供款上調",
+  "type": "random",
+  "cat": "personal",
+  "cd": 24,
+  "desc": "居所租金或供款利率上調，每月開支增加。",
+  "choices": [
+   {
+    "t": "調整生活開支並維持居所",
+    "r": "短期有壓力，財務更清晰。",
+    "fx": {
+     "wealth": -3000,
+     "stress": 3,
+     "satisfaction": -1
+    }
+   },
+   {
+    "t": "搬往較遠但便宜的地方",
+    "r": "節省開支，但通勤更累。",
+    "fx": {
+     "wealth": 4000,
+     "energy": -6,
+     "stress": 3,
+     "satisfaction": -2
+    }
+   },
+   {
+    "t": "動用儲蓄頂住",
+    "r": "暫時無事，但財務緩衝減少。",
+    "fx": {
+     "wealth": -9000,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_invest_tip",
+  "title": "朋友推介投資機會",
+  "type": "random",
+  "cat": "personal",
+  "cd": 18,
+  "desc": "朋友向你推介一個聲稱回報豐厚的投資。",
+  "choices": [
+   {
+    "t": "投入小額試水",
+    "r": "結果視乎運氣。",
+    "fx": {
+     "stress": 1
+    },
+    "p": 0.5,
+    "r2": "回報不錯，小賺一筆。",
+    "fx2": {
+     "wealth": 3000,
+     "satisfaction": 1
+    }
+   },
+   {
+    "t": "婉拒",
+    "r": "你保持審慎。",
+    "fx": {
+     "satisfaction": 0
+    }
+   },
+   {
+    "t": "深入研究後再決定",
+    "r": "花時間研究，避開了一個陷阱。",
+    "fx": {
+     "professional": 0,
+     "energy": -2,
+     "stress": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_flu",
+  "title": "流感高峰",
+  "type": "random",
+  "cat": "health",
+  "cd": 12,
+  "desc": "校內流感個案上升，你亦出現不適。",
+  "choices": [
+   {
+    "t": "請病假休息",
+    "r": "康復較快，但工作稍有積壓。",
+    "fx": {
+     "health": 3,
+     "energy": 6,
+     "stress": 2,
+     "managementTrust": -1
+    }
+   },
+   {
+    "t": "帶病上班",
+    "r": "工作如常，身體吃不消。",
+    "fx": {
+     "health": -4,
+     "energy": -8,
+     "stress": 3
+    }
+   },
+   {
+    "t": "減少課外活動並盡量休息",
+    "r": "折衷安排。",
+    "fx": {
+     "health": 1,
+     "energy": 2,
+     "studentRelation": -1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_workload_survey",
+  "title": "教師工作量問卷",
+  "type": "random",
+  "cat": "work",
+  "cd": 18,
+  "desc": "全校教師填寫工作量及福祉問卷，校方承諾跟進。",
+  "choices": [
+   {
+    "t": "如實反映過勞情況",
+    "r": "校方開始檢視，但不保證改善。",
+    "fx": {
+     "managementTrust": -1,
+     "satisfaction": 2,
+     "stress": -2
+    }
+   },
+   {
+    "t": "提出具體可行的建議",
+    "r": "建議被部分採納。",
+    "fx": {
+     "leadership": 1,
+     "managementTrust": 2,
+     "stress": 2
+    }
+   },
+   {
+    "t": "只作簡短填寫",
+    "r": "事不關己。",
+    "fx": {
+     "stress": 0
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_extra_lessons",
+  "title": "加授補課班邀請",
+  "type": "random",
+  "cat": "work",
+  "cd": 8,
+  "desc": "學校邀請你加授補底課程，有額外津貼。",
+  "choices": [
+   {
+    "t": "接受",
+    "r": "收入增加，但更疲累。",
+    "fx": {
+     "wealth": 5000,
+     "energy": -8,
+     "stress": 4,
+     "studentRelation": 1
+    }
+   },
+   {
+    "t": "只接受少量班別",
+    "r": "收入有限，負擔較輕。",
+    "fx": {
+     "wealth": 2000,
+     "energy": -3,
+     "stress": 1
+    }
+   },
+   {
+    "t": "婉拒",
+    "r": "保持平衡。",
+    "fx": {
+     "satisfaction": 1
+    }
+   }
+  ]
+ },
+ {
+  "id": "e_balance_invite",
+  "title": "同事邀約活動",
+  "type": "conditional",
+  "cat": "colleague",
+  "cd": 8,
+  "desc": "同事邀請你參加學會活動及週末郊遊，你需要安排時間。",
+  "choices": [
+   {
+    "t": "積極參加",
+    "r": "關係拉近，心情輕鬆。",
+    "fx": {
+     "relationship": 2,
+     "satisfaction": 3,
+     "stress": -4,
+     "energy": -2
+    }
+   },
+   {
+    "t": "參加一半",
+    "r": "兼顧工作及生活。",
+    "fx": {
+     "relationship": 1,
+     "satisfaction": 1,
+     "stress": -1
+    }
+   },
+   {
+    "t": "專注工作",
+    "r": "完成了更多工作，但感覺有點孤單。",
+    "fx": {
+     "efficiency": 1,
+     "satisfaction": -1
+    }
+   }
+  ],
+  "cond": [
+   [
+    "path",
+    "==",
+    "balanced"
+   ]
+  ],
+  "max": 8
+ },
+ {
+  "id": "e_uni_partner",
+  "title": "大學伙伴計劃邀請",
+  "type": "random",
+  "cat": "professional",
+  "cd": 18,
+  "desc": "大學邀請學校參與教育伙伴計劃，需要老師協助配合。",
+  "choices": [
+   {
+    "t": "擔任聯絡老師",
+    "r": "你增進了專業視野，也增加了工作量。",
+    "fx": {
+     "professional": 2,
+     "communication": 1,
+     "leadership": 1,
+     "stress": 4,
+     "energy": -5
+    }
+   },
+   {
+    "t": "提供意見及支援",
+    "r": "適度參與。",
+    "fx": {
+     "professional": 1,
+     "stress": 1,
+     "energy": -1
+    }
+   },
+   {
+    "t": "讓其他同事負責",
+    "r": "節省時間，錯過機會。",
+    "fx": {
+     "stress": -1
+    }
+   }
+  ]
+ }
+]

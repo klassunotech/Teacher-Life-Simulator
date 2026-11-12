@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+ <rect width="512" height="512" fill="#101827"/>
+ <path d="M116 174 256 112l140 62-140 62z" fill="#f3c969" stroke="#fff2c6" stroke-width="10" stroke-linejoin="round"/>
+ <path d="M166 216v82c44 34 136 34 180 0v-82l-90 41z" fill="#f3c969" stroke="#fff2c6" stroke-width="10" stroke-linejoin="round"/>
+ <path d="M396 181v93" stroke="#fff2c6" stroke-width="10" stroke-linecap="round"/>
+ <circle cx="396" cy="294" r="15" fill="#f3c969"/>
+ <text x="256" y="390" font-family="Arial,sans-serif" font-size="88" font-weight="900" text-anchor="middle" fill="#fff2c6">TLS</text>
+</svg>

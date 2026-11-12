@@ -1,0 +1,45 @@
+{
+  "seedsPerStrategy": 100,
+  "strategies": {
+    "noTraining": {
+      "runs": 100,
+      "avgHours": 0,
+      "avgCore": 0,
+      "avgElective": 0,
+      "softTargetNotices": 100,
+      "formalWarnings": 100,
+      "njtCompleted": 0,
+      "avgTurn": 36
+    },
+    "schoolBased": {
+      "runs": 100,
+      "avgHours": 108,
+      "avgCore": 0,
+      "avgElective": 0,
+      "softTargetNotices": 100,
+      "formalWarnings": 100,
+      "njtCompleted": 0,
+      "avgTurn": 36
+    },
+    "njtCoreOnly": {
+      "runs": 100,
+      "avgHours": 30,
+      "avgCore": 30,
+      "avgElective": 0,
+      "softTargetNotices": 100,
+      "formalWarnings": 0,
+      "njtCompleted": 0,
+      "avgTurn": 36
+    },
+    "completeNJT": {
+      "runs": 100,
+      "avgHours": 198,
+      "avgCore": 30,
+      "avgElective": 60,
+      "softTargetNotices": 0,
+      "formalWarnings": 0,
+      "njtCompleted": 100,
+      "avgTurn": 36
+    }
+  }
+}

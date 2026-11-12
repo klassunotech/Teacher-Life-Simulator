@@ -1,0 +1,430 @@
+{
+ "balanced": {
+  "single": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 2311,
+     "p50": 7460,
+     "p90": 7913
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 1628,
+     "p50": 6777,
+     "p90": 7230
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": 1142,
+     "p50": 6291,
+     "p90": 6744
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -52,
+     "p50": 4736,
+     "p90": 5189
+    },
+    "retireNegativePct": 26,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": 169,
+     "p50": 5318,
+     "p90": 5771
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -65,
+     "p50": 3036,
+     "p90": 3489
+    },
+    "retireNegativePct": 28,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  },
+  "married": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 2333,
+     "p50": 7482,
+     "p90": 7935
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 1831,
+     "p50": 6980,
+     "p90": 7433
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": 646,
+     "p50": 5795,
+     "p90": 6248
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -32,
+     "p50": 4032,
+     "p90": 4485
+    },
+    "retireNegativePct": 28,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 4388,
+     "p90": 4842
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 1576,
+     "p90": 2029
+    },
+    "retireNegativePct": 32,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  },
+  "kids": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 2201,
+     "p50": 7351,
+     "p90": 7803
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 1636,
+     "p50": 6786,
+     "p90": 7238
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": 384,
+     "p50": 5534,
+     "p90": 5986
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -48,
+     "p50": 3612,
+     "p90": 4064
+    },
+    "retireNegativePct": 29,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 4020,
+     "p90": 4472
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 966,
+     "p90": 1418
+    },
+    "retireNegativePct": 33,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  },
+  "elder": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 2190,
+     "p50": 7339,
+     "p90": 7792
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 1534,
+     "p50": 6683,
+     "p90": 7136
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": 632,
+     "p50": 5781,
+     "p90": 6234
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -46,
+     "p50": 3962,
+     "p90": 4415
+    },
+    "retireNegativePct": 27,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 4483,
+     "p90": 4936
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 1695,
+     "p90": 2148
+    },
+    "retireNegativePct": 32,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  }
+ },
+ "hard": {
+  "single": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 1877,
+     "p50": 7028,
+     "p90": 7480
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 1194,
+     "p50": 6345,
+     "p90": 6798
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": 650,
+     "p50": 5801,
+     "p90": 6254
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -37,
+     "p50": 4246,
+     "p90": 4698
+    },
+    "retireNegativePct": 27,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 4779,
+     "p90": 5231
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 2497,
+     "p90": 2949
+    },
+    "retireNegativePct": 30,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  },
+  "married": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 1709,
+     "p50": 6860,
+     "p90": 7313
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 1207,
+     "p50": 6358,
+     "p90": 6810
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": -64,
+     "p50": 5088,
+     "p90": 5541
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -64,
+     "p50": 3326,
+     "p90": 3778
+    },
+    "retireNegativePct": 28,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 3612,
+     "p90": 4064
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 799,
+     "p90": 1251
+    },
+    "retireNegativePct": 33,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  },
+  "kids": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 1530,
+     "p50": 6683,
+     "p90": 7132
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 965,
+     "p50": 6118,
+     "p90": 6567
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 4775,
+     "p90": 5224
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 2852,
+     "p90": 3301
+    },
+    "retireNegativePct": 30,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 3185,
+     "p90": 3634
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 131,
+     "p90": 580
+    },
+    "retireNegativePct": 33,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  },
+  "elder": {
+   "frugal": {
+    "wealth20y": {
+     "p10": 1614,
+     "p50": 6765,
+     "p90": 7216
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": 958,
+     "p50": 6109,
+     "p90": 6560
+    },
+    "retireNegativePct": 0,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "standard": {
+    "wealth20y": {
+     "p10": -22,
+     "p50": 5129,
+     "p90": 5580
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -30,
+     "p50": 3310,
+     "p90": 3761
+    },
+    "retireNegativePct": 29,
+    "endings": {
+     "教學專家": 100
+    }
+   },
+   "comfort": {
+    "wealth20y": {
+     "p10": -150,
+     "p50": 3766,
+     "p90": 4217
+    },
+    "fund20y": 492,
+    "retireWealthEnd": {
+     "p10": -150,
+     "p50": 978,
+     "p90": 1429
+    },
+    "retireNegativePct": 33,
+    "endings": {
+     "教學專家": 100
+    }
+   }
+  }
+ }
+}
